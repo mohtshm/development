@@ -1,0 +1,240 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="stylesheets/styles.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <header>
+        <div class="header-container ">
+            <div class="dvrow">
+                <div class="headerTop">
+                    <div class="bhomesTopLeftLogo">
+                        <a class="bhomesLogo" href="#">
+                            <img src="images/headertop.jpg" /></a>
+                    </div>
+                    <div id="top_contactno" class="">
+                        <p class="bhomes-contactNo h25">+971 600 52 2212</p>
+                    </div>
+                </div>
+                <div class="headerNavBar ">
+                    <div class="menuButton">
+                        <div class="btns">
+                            <button type="button" class="btn" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="collaspeMenu"></span>
+                                <span class="collaspeMenu"></span>
+                                <span class="collaspeMenu"></span>
+                            </button>
+                        </div>
+                        <div class="menuMobileLine">Menu</div>
+                    </div>
+                </div>
+                <div class="headerTopLinks">
+                    <div class="linksRow">
+                        <div class="signInSignUp">
+                            <p class="pLinks">
+                                <a href="#" class="SingInLink1">Sign in</a>&nbsp;<span class="textSeparartor">|</span>&nbsp;<a href="#" class="SingInLink2">Join&nbsp;Today</a>
+                            </p>
+                        </div>
+                        <div class="countryReference">
+                            <p>
+                                <a href="#" class="countryCurrency">UAE<img class="country-flag" src="images/flags/UAE.gif" />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbarheader">
+                    <nav class="navbar-collapse">
+                        <ul id="navbar_ul">
+                            <li class="navbar_ul_li_lg"><a id="A8" class="h4" runat="server" href="#">Search                      
+                                <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A1" class="h4" runat="server" href="#">Buy                      
+                                <span>(+)</span><div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A2" class="h4" runat="server" href="#">Rent                   
+                                <span>(+)</span><div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a class="h4" id="A3" runat="server" href="#">Sell                   
+                                <span>(+)</span><div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a class="h4" id="A4" runat="server" href="#">Landlords              
+                               <span>(+)</span>
+                                <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs">
+                                <a href="#" class="h4" data-toggle="dropdown">Property&nbsp;Management<span>(+)</span><div class="header-line"></div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="navbar_ul_li_xs">
+                                        <a href="#" class="h4" data-toggle="dropdown">Management<span>(+)</span><div class="header-line"></div>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Property Management Services</a></li>
+                                    <li><a href="#">Why use our Service?</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="navbar_ul_li"><a class="h4" id="A6" runat="server" href="#">Short&nbsp;Stays       
+                                <span></span>
+                                <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A7" class="h4" runat="server" href="#">About Us                
+                               <span>(+)</span>
+                                <div class="header-line"></div>
+                            </a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-line2 col-sm-12 col-xs-12 hidden-lg hidden-sm hidden-md"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="mainbody">
+        <section class="maincontent">
+
+            <form id="Form1" runat="server">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+
+        </section>
+        <footer>
+            <div class="footer_container">
+                <div class="row">
+                    <div class="line1">
+                        <div class="line2">
+                            <div class="line3 ">
+                            </div>
+                            <div class="line7 ">
+                                <div class="line10"></div>
+                                <div class="line11"></div>
+                            </div>
+                        </div>
+                        <div class="lin8">
+                            <div class="line12">
+                                <div class="line14">
+                                </div>
+                                <div class="line15">
+                                    <div class="line16">
+                                        <div class="line18">
+                                        </div>
+                                        <div class="line19">
+                                        </div>
+                                    </div>
+                                    <div class="line17">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line13">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line9"></div>
+                </div>
+                <div>
+                    <ol>
+                        <li class="ListFirst1">Site Features</li>
+                        <li class="ListFirst2">
+                            <ol>
+                                <li><a href="#">Why use Better Homes?</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Preferred Partners</a></li>
+                                <li><a href="#">Our Agents</a></li>
+                                <li><a href="#">Our Branches</a></li>
+                                <li><a href="#">Email Alerts</a></li>
+                                <li><a href="#">Make an Offer</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <ol>
+                        <li class="ListFirst3">Useful Links</li>
+                        <li class="ListFirst4">
+                            <ol>
+                                <li><a href="#">List your property</a></li>
+                                <li><a href="#">Online Magazine</a></li>
+                                <li><a href="#">Buy</a></li>
+                                <li><a href="#">Rent</a></li>
+                                <li><a href="#">Sell</a></li>
+                                <li><a href="#">UAE Overview</a></li>
+                                <li><a href="#">Dubai Properties</a></li>
+                                <li><a href="#">Abu Dhabi Properties</a></li>
+                                <li><a href="#">RERA</a></li>
+                                <li><a href="#">Ejari</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <ol>
+                        <li class="ListFirst5">Get Social</li>
+                        <li class="ListFirst6">
+                            <ol>
+                                <li><a href="#">Subscribe to Mailers</a></li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Linkedin</a></li>
+                                <li><a href="#">Google+</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div class="bhomes-footer-logo">
+                    <div id="row">
+                        <div id="footer-brand">
+                            <a href="#">
+                                <img src="images/bh-btm.jpg" />
+                            </a>
+                        </div>
+                        <div id="footer-contact">
+                            <ol id="footerContacts">
+                                <li>+971 600 52 2212</li>
+                                <li><a href="#">customercare@bhomes.com</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div id="footerHr">
+                    <div id="hr_Line"></div>
+                </div>
+                <div id="hr_footer_tags_div">
+                    <div id="hr_footer_tags_div_div1">
+                        <ol id="hr_footer_tags_div_div1_ol">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Useful Links</a></li>
+                        </ol>
+                    </div>
+                    <div id="hr_footer_tags_div_div3"></div>
+                    <div id="hr_footer_tags_div_div2">
+                        <div id="hr_footer_tags_div_div2_div1"></div>
+                        <div id="hr_footer_tags_div_div2_div2">Better Homes Properties 2014. All Rights Reserved</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bhomes.js"></script>
+
+</body>
+</html>

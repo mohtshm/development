@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="hoempage_background_image.ascx.cs" Inherits="customcontrols_hoempage_background_image" %>
+<section class="homepage_background_image"> <div></div></section>

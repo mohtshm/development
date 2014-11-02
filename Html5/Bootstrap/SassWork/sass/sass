@@ -1,0 +1,15 @@
+>>> Sass is watching for changes. Press Ctrl-C to stop.
+      write ../stylesheets/sty
+      write ../stylesheets/sty.map
+>>> Change detected to: styles.scss
+      error styles.scss (Line 214: "header div.header-container div.row div.header-line2" failed to @extend "hidden-lg".
+The selector "hidden-lg" was not found.
+Use "@extend hidden-lg !optional" if the extend should be able to fail.
+)
+      error D:/Bhomes_Bootstrp/bhomesbssass/sass/styles.scss (Line 214: "header div.header-container div.row div.header-line2" failed to @extend "hidden-lg".
+The selector "hidden-lg" was not found.
+Use "@extend hidden-lg !optional" if the extend should be able to fail.
+)
+>>> Change detected to: styles.scss
+      write ../stylesheets/sty
+      write ../stylesheets/sty.map

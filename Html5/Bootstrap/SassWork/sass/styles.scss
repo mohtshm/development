@@ -1,0 +1,935 @@
+@import "../stylesheets/bootstrap-compass";
+@import "variables";
+@import "../stylesheets/bootstrap";
+//colors
+$white: #fff;
+$color_biscay_approx: #233567;
+$color_red_violet_approx: #d30e7d;
+$color_mystic_approx: #dfe5ee;
+$color_silver_approx: #bfbfbf;
+$color_matisse_approx: #1e5799;
+$color_azure_approx: #3e6194;
+$color_catalina_blue_approx: #002d72;
+$black: rgb(0, 0, 0);
+$color_celeste_approx: #cccccc;
+$color_ship_cove_approx: #7e95b7;
+$color_horizon_approx: #5e7ba7;
+$color_chambray_approx: #33568e;
+$color_woodsmoke_approx: #0f0f0f;
+$color_nepal_approx: #8b9fbe;
+$color_steel_blue_approx: #407faa;
+
+
+//@extend-elements
+//original selectors
+//.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default
+//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+%extend_1{box-shadow: none;	background-color: $white;	color: $color_azure_approx !important;	border-color: $white;}
+body {font-family: Tahoma, Arial, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;}
+.headerMargin {	margin-top: 10px;}
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+.site-features 	{
+border-radius: 0;	background-color: $white;	margin-bottom: 0;	padding-top: 0;	padding-bottom: 0;	padding-left: 9px;	
+> li + li:before 	{	content: "|";		color: $color_biscay_approx	;	font-size: 11px;		padding: 0 3px;}
+}
+.bhomes-contacts {	background-color: $white;	font-size: 12px;	float: right;	font-weight: bold;padding-right: 21px;
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	> li + li:before {
+		content: "|";
+		color: $color_red_violet_approx;
+		padding: 0 4px 0 0;
+		}}
+.navbar-brand_custom 	{padding-top: 0;}
+.bhomes-footer-logo 	{padding-top: 45px;}
+.footer-hr 	{background-color: $color_mystic_approx;	height: 2px;	margin-bottom: 9px;}
+.footer-hr-section{	padding: 19px 19px 0 28px;}
+.footer-hr-section-tags {	padding: 0 14px 9px 24px;}
+.footer-tags {	font-size: 10px;	color: $color_silver_approx;	font-weight: bold;}
+.footer-links {	background-color: $white;	list-style: none outside none;
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 11px;
+	padding-left: 27px;
+	> li + li:before {				
+		content: "";
+		}}
+.footer-links-headertext {
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	font-weight: bold;
+	background-color: $white;}
+	.bhomes-footer-tags li {color: $color_silver_approx;}
+.bhomes-footer-tags {
+background-color: $white;
+	font-weight: bold;
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	font-size: 10px;
+	margin-bottom: 0;
+	padding-bottom: 11px;
+	padding-left: 4px;
+	padding-top: 0;
+	
+	> li + li:before{ 
+		content: "|";
+		color: $color_silver_approx;
+		font-size: 10px;
+		padding-right: 3px;
+		padding-left: 0;
+		}}
+.footerAnchor {	color: $color_silver_approx;	font-size: 10px;	}
+.reg {	padding-left: 83px;	}
+.h25 {	font-size: 25px;	font-weight: normal;}
+.text-separator {	color: $color_red_violet_approx;	font-size: 12px;	}
+.bhomes-contactNo {	float: left;	letter-spacing: 2px;	padding-left: 21px;	padding-top: 2px;	}
+.country-flag {	margin-bottom: 2px;	padding-left: 9px;}
+nav {	list-style: none outside none;}
+.header-line2 {	background-color: $color_biscay_approx;	height: 10px;position: absolute;top:42px;}
+.nav>li>a {	padding-left: 0;	padding-right: 0;	padding-bottom: 0;}
+.nav>li {	border: none;	background-color: #1f5093;}
+.nav-justified>li {	border: none;	background-color: transparent;}
+a {
+	&:hover {
+		text-decoration: none;}
+	&:focus {
+		outline: none;
+		text-decoration: none;
+		}
+		}
+.header-line {	background-color: $color_biscay_approx;	height: 10px;	margin-top: 10px;	}
+.headerlinehovering {	background-color: $color_red_violet_approx;	height: 10px;	margin-top: 10px;	}
+.headerLinks {
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	background-color: $white;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 9px;
+	}
+.header-com {	float: right;	margin-top: 21px;	padding-right: 22px;	}
+.h4 {	margin-top: 0;}
+
+.headerTextHovering {	color: $color_red_violet_approx;	}
+.dvcontainer {	background-image: url("../images/mainimage.jpg");	background-repeat: no-repeat;	height: 400px;	left: 0;	position: absolute;	top: 0;	width: 100%;	z-index: -1;	}
+.main-search {
+	padding-bottom: 14px;
+	background: linear-gradient(to bottom, $color_matisse_approx 0, $color_azure_approx 0, $color_catalina_blue_approx 50%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height: auto;
+	margin-top: 270px;
+	padding-top: 19px;
+	padding-left: 25px;
+	padding-right: 51px;
+	color: $white;
+	}
+.main-search-enterLocation {	height: auto;	font-size: 16px;	padding: 6px 7px;	color: $color_azure_approx !important;	border: none;	}
+.btnSearch {
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 2px;
+	right: 0;
+	//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 2px 3px 0 0 $black !important;
+	height: 50px;
+	padding-bottom: 0;
+	padding-top: 0;
+	position: relative;
+	text-align: center;
+	width: 110px;
+	font-size: 14px;
+	padding-left: 13px;
+	font-weight: bold;
+	color: $white;
+	background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UxNGM5ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iI2RmNGM5YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iI2UwNDg5YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2RhM2E5NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2Q2Mjc4YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iI2QzMWM4OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Q3MTY4MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYzJSIgc3RvcC1jb2xvcj0iI2QyMTE3YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iI2Q0MGU3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNDBlN2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;}
+.dropdown {	width: 100%;	}
+.caret{ 	margin-right: 0;	margin-top: 9px;	color: $color_azure_approx;	float: right;	}
+.dropdown-menu {
+	border: none;
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+	min-width: 100%;
+	}
+.mainsearch-btn-group {
+	//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 2px 3px 4px 0 $black;
+	height: 50px;
+	button {
+		height: 50px;
+		}
+		}
+.dropdownMenu1 {
+	width: inherit;
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	font-size: 14px;
+	background-color: $white;
+	color: $color_azure_approx;
+	}
+.bhomes-body {
+	//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 40px -9px $color_celeste_approx;
+	margin-bottom: 0.5%;
+	}
+.bhomes-content-space {	padding-bottom: 147px;}
+.right-alignment {	float: right;	}
+.mainsearch-listing {
+	border: none;
+	background-color: transparent;
+	> li + li:before {
+		content: "";
+		font-size: 10px;
+		padding-right: 3px;
+		padding-left: 0;
+		}}
+.mainsearch-icons {
+	background: linear-gradient(to bottom, $color_ship_cove_approx 0, $color_horizon_approx 28%, $color_azure_approx 50%, $color_catalina_blue_approx 51%, $color_catalina_blue_approx 78%, $color_chambray_approx 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 2px 7px -2px $color_woodsmoke_approx;
+	height: 46px;
+	margin: 0;
+	width: 46px;}
+.draw-search {		margin-left: 8px;		margin-top: 7px;}
+.agent {	margin-left: 12px;		margin-top: 7px;	}
+.bhomes-btn-group {	display: inline;	position: relative;	vertical-align: middle;}
+input:hover {
+		//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 2px 3px 4px 0 $black;
+		}
+	.btn-group button {
+		height: 52px;
+		//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 2px 3px 4px 0 $black;
+		color: $color_biscay_approx;
+		padding-left: 41px;
+		font-weight: bold;
+		border: none;
+		padding-top: 9px;
+		background-image: none;
+		width: 116px;
+		border-color: $white;
+		text-align: left;
+		font-size: 14px;
+		//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		padding-top: 3px;
+		background-color: $white;
+		&:hover {
+			background-color: $white;
+			color: $color_azure_approx !important;
+			}
+		&:focus {
+			background-color: $white;
+			color: $color_azure_approx !important;
+			}
+		&:active {
+			background-color: $white;
+			color: $color_azure_approx !important;
+			}}
+
+
+.navbar-toggle {  background-color: #fff;  border-radius:0px;float: left;padding: 0 0px;margin-top: 3px;border: none;margin-left: 8px;
+ .icon-bar {  margin-top:6px; height: 6px;    width: 30px;    background-color: gainsboro;
+  }
+}
+
+
+.agentAndDrawSearchIcons {	left: 0;	top: 1px;	}
+.btn-default {
+	&:hover {
+		@extend %extend_1;}
+	&:focus {	
+		@extend %extend_1;}
+	&:active {	
+		@extend %extend_1;}		
+		}
+.ddlserviceType {
+	width: 100%;
+	font-size: 14px;
+	li a {
+		line-height: 33px;
+		}}
+.bhomes-btn-group-ul {
+	width: 100%;
+	font-size: 14px;
+	li a {
+		line-height: 33px;}	}
+label {	color: $white;	margin-top: 9px;	}
+//.col-lg-pull-14 {	right: 200%;	}
+//.col-lg-css-width {	width: 339%;	}
+@media (max-width: 768px) {
+	.col-lg-pull-14 {
+		right: 0;
+		}
+	.col-lg-css-width {
+		width: 100%;
+		}}
+.search-ranges-controls {	right: 324px;	}
+hr {	padding-top: 10px;	}
+.search2 {
+	background: linear-gradient(to bottom, $color_ship_cove_approx 0, $color_horizon_approx 28%, $color_azure_approx 50%, $color_catalina_blue_approx 51%, $color_catalina_blue_approx 78%, $color_chambray_approx 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	//If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 2px 7px -2px $color_woodsmoke_approx;
+	float: left;
+	height: 46px;
+	margin: 0;
+	width: 46px;}
+//img {		margin: 8px 6px 4px 9px;}
+.AdSearchcontactNo {	text-align: right;	font-size: 12px;	}
+.SearchText {	text-align: left;	}
+.advance-text {	text-align: left;	text-decoration: underline;}
+.caret {color: $white;}
+.navbar-text {margin-bottom: 6.5px;	}
+.margin-top {margin-top: 0;	}
+.col-xs-pull-14 {	right: 0;	}
+.dvl {	padding-left: 4px;	}
+.dvOR {	padding-left: 16px;	color: $color_steel_blue_approx;	}
+.btnMobile {	height: 38px;	text-align: left;}
+.margin-top-forMobile {	margin-top: 20px;	}
+.lblTo{ padding-left: 16px}
+.dvBedrooms {	padding-left: 3px;}
+.margin-bottom {	padding-bottom: 2px;	}
+footer {	background-color: $white;	}
+.btn {	&:active {
+		//If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+		}
+}
+.subMenuSymbol{float: right;padding-right: 13px;background-color:transparent;	height: 0px;	margin-top: 0px;}
+.footer-left-white {	background-color: $white;	height: 5px;	}
+.footer-left-pink {	background-color: $color_red_violet_approx;	height: 5px;}
+.headerMarginEmpty{ 	margin-top: 100px;	}
+.bhomes-footer {	line-height: 15px;}
+.footer-right-blue {	background-color: $color_biscay_approx;	height: 5px;}
+.country-currency-text:hover {	color: $color_biscay_approx !important;}
+.nav-justified> li>a:hover {	background-color: transparent;}
+.nav-justified > li > a:focus {	background-color: transparent;}
+.headerLinks> li + li:before {	content: " ";	color: $color_biscay_approx;	font-size: 11px;	padding: 0 3px;}
+.open > .dropdown-toggle.btn-default {	@extend %extend_1;}
+.headerbreadcrumb >	li + li+ li:before {		color: $color_celeste_approx;		content: "|";		padding-top: 6px;		position: absolute;		}
+li>a>div :hover {		content: " ";		color: $color_celeste_approx;		}
+.btn-group > .btn {
+	&:hover {
+		z-index: 0;}
+	&:focus {
+		z-index: 0;}
+	&:active {
+		z-index: 0;}	
+		}
+.btn-group-vertical > .btn {	&:hover {		z-index: 0;}	&:focus {		z-index: 0;}	&:active {		z-index: 0;}	}
+//.site-nav-wrapper.hidden {
+//
+//    display: none;
+//
+//    @include breakpoint($breakpoint-lg) {
+//        display: block;
+//    }
+//}
+@mixin setXSandSMandMD($xsCol,$smCol,$mdCol){
+@include make-xs-column-offset($xsCol);
+@include make-sm-column-offset($smCol);
+@include make-md-column-offset($mdCol);
+
+}
+@mixin setXSandSMandMDandLGoffset($xsCol,$smCol,$mdCol,$lgCol){
+@include make-xs-column-offset($xsCol);
+@include make-sm-column-offset($smCol);
+@include make-md-column-offset($mdCol);
+@include make-lg-column-offset($lgCol);
+}
+
+@mixin setXSandSMandMDandLG($xsCol,$smCol,$mdCol,$lgCol){
+@include make-xs-column($xsCol);
+@include make-sm-column($smCol);
+@include make-md-column($mdCol);
+@include make-lg-column($lgCol);
+}
+	@mixin setXSandLGandSM($xsCol,$lgCol,$smCol){
+@include make-xs-column($xsCol);
+@include make-lg-column($lgCol);
+@include make-sm-column($smCol);
+}
+	@mixin setXSandMD($xsCol,$mdCol){
+@include make-xs-column($xsCol);
+@include make-md-column($mdCol);
+}
+@mixin setXSandLG($xsCol,$lgCol){
+@include make-xs-column($xsCol);
+@include make-lg-column($lgCol);
+}
+@mixin setXSandSM($xsCol,$smCol){
+@include make-xs-column($xsCol);
+@include make-sm-column($smCol);
+}
+
+@mixin setMDandLG($mdCol,$lgCol){
+@include make-lg-column($lgCol);
+@include make-md-column($mdCol);
+}
+	@mixin setSMandMD($smCol,$mdCol){
+@include make-sm-column($smCol);
+@include make-md-column($mdCol);
+}
+@mixin setXS($xsCol){
+@include make-xs-column($xsCol);
+}
+
+@mixin setparameterMediaQuery1(){
+ @media(min-width: $screen-desktop) {
+                    right: 200%;
+                }
+}
+@mixin menuetext(){
+ padding-left:10px;    padding-top: 21px;
+}
+
+@mixin navbar-inverse-custom(){
+ background-color: #fff;
+.navbar-inverse {
+	background-color: $white;
+	border-color: $white;
+	
+}
+
+}
+header{
+	div.header-container{ 
+		@extend .container;
+		@include navbar-inverse-custom;
+		div.dvrow{ 
+			@extend .row;
+			div.headerTop{
+				 @include setXSandSMandMDandLG(12,8,8,8);
+				 @extend .row;
+				 @extend .headerMargin;
+				 div.bhomesTopLeftLogo{ 
+					@include setXSandSMandMDandLG(12,12,4,4);
+					a.bhomesLogo{
+						@extend .navbar-brand; 
+						@extend .navbar-brand_custom;
+								}
+										}
+				div#top_contactno{
+				
+					 @include setMDandLG(8,8);
+					 @extend .col-lg-push-2;
+					 @extend .col-md-push-2;
+					 @extend .hidden-sm;
+					@extend .hidden-xs;
+					}
+						}
+			div.headerNavBar{ 
+				@extend .navbar-header;
+				@include  setXS(3);
+				div.menuButton{ 
+					@extend .row;
+					div.btns{ 
+						@include setXSandSM(5,5);
+						button.btn{
+							@extend .navbar-toggle;
+							span.collaspeMenu{ 
+								@extend .icon-bar;								
+							}
+						}
+					}
+					div.menuMobileLine{ 
+					
+						@extend .hidden-sm;
+						@extend .hidden-md;
+						@extend .hidden-lg;
+						@include  setXS(5);
+						@include menuetext();
+					}
+				}
+			}
+			div.headerTopLinks{ 
+				@include setXSandSMandMDandLG(9,4,4,4);
+				div.linksRow{
+					@extend .row;
+					div.signInSignUp{ 
+						@include setXSandSMandMDandLG(8,7,9,9);
+						p.pLinks{ 
+							@extend .navbar-text;
+							@extend .header-com;
+							a.SingInLink1{ 
+								@extend .navbar-link;														
+								}
+							span.textSeparartor{
+								@extend .text-separator;
+								 }
+							a.SingInLink2{ 
+							@extend .navbar-link;												
+								}
+							}
+						}						
+					div.countryReference{ 
+						@include setXSandSMandMDandLG(4,5,3,3);
+						p{ 
+							@extend .navbar-text;
+							@extend .header-com;
+							a.countryCurrency{ 
+								@extend .navbar-link;
+								@extend .h2;
+								@extend .country-currency-text;
+								}
+							}						
+						}
+					}				
+			}
+			div.navbarheader{		
+					@include setXSandSMandMDandLG(12,12,12,12);
+					 @media(max-width: $screen-xs) {
+						 		top: -42px; 
+											}
+					nav.navbar-collapse{				
+						@extend .collapse;						
+                         ul#navbar_ul{ 
+						 @media(max-width: $screen-xs) {
+						 				width:70%;
+										z-index:100;
+										position:absolute;
+											//@include navbar-vertical-align(30px);
+										}
+								@extend .nav;
+								@extend .nav-justified;
+								@extend .headerbreadcrumb;
+								li.navbar_ul_li{
+									a{ 
+									@media(max-width: $screen-xs) {
+						 					color:#fff;
+											background-color: #1f5093;
+											margin-bottom: 0px;
+											padding-top: 16px;
+											font-size:12px;
+											text-align:left;
+											padding-left:13px;
+
+										}
+										div{ @media(max-width: $screen-xs) {
+											background-color: #4e73a8;
+						 					color:#4e73a8;
+											width:95%;
+											height:1px;
+
+											}
+										}
+									}	
+
+								}
+								li.navbar_ul_li_xs{
+									a{ 
+											@media(max-width: $screen-xs) {									
+						 						color:#fff;
+												background-color: #1f5093;
+												margin-bottom: 0px;
+												padding-top: 16px;
+												font-size:12px;
+												text-align:left;
+												padding-left:13px;
+											}
+											div{ @media(max-width: $screen-xs) {
+												background-color: #4e73a8;
+						 						color:#4e73a8;
+												width:95%;
+												height:1px;
+												}
+											}
+											span{ 
+												@extend .subMenuSymbol;
+											   @extend .hidden-lg;
+												@extend .hidden-md;
+												@extend .hidden-sm;
+											
+											}
+									}	
+									ul{ 
+										@extend .hidden-lg;
+										@extend .hidden-md;
+										@extend .hidden-sm;
+										li.navbar_ul_li_xs{										
+										a{ 
+										@media(max-width: $screen-xs) {
+										
+						 						color:#fff;
+												background-color: #1f5093;
+												margin-bottom: 0px;
+												padding-top: 16px;
+												font-size:12px;
+												text-align:left;
+												padding-left:13px;
+
+											}
+											div{ @media(max-width: $screen-xs) {
+												background-color: #4e73a8;
+						 						color:#4e73a8;
+												width:95%;
+												height:1px;
+
+												}
+											}
+											
+									}	
+									
+								}
+										li.navbar_ul_li{
+										a{ 
+										@media(max-width: $screen-xs) {
+						 						color:#fff;
+												background-color: #1f5093;
+												margin-bottom: 0px;
+												padding-top: 16px;
+												font-size:12px;
+												text-align:left;
+												padding-left:13px;
+
+											}
+											div{ @media(max-width: $screen-xs) {
+												background-color: #4e73a8;
+						 						color:#4e73a8;
+												width:95%;
+												height:1px;
+
+												}
+											}
+										}	
+
+								}
+										}
+								}
+								//li.navbar_ul_li_lg{
+								//	
+								//	@extend .hidden-xs;
+								//	@extend .hidden-sm;
+								//	a{ 
+								//	@media(max-width: $screen-xs) {
+						 		//			color:#fff;
+								//			background-color: #1f5093;
+								//			margin-bottom: 0px;
+								//			padding-top: 16px;
+								//			font-size:12px;
+								//			text-align:left;
+								//			padding-left:13px;
+								//
+								//		}
+								//		div{ @media(max-width: $screen-xs) {
+								//			background-color: #4e73a8;
+						 		//			color:#4e73a8;
+								//			width:95%;
+								//			height:1px;
+								//
+								//			}
+								//		}
+								//	}	
+								//}
+								
+							}					
+						}
+				}
+		}
+	}
+}
+
+
+
+footer{
+	@extend .bhomes-footer;
+	@extend .headerMarginEmpty;
+	div.footer_container{ 
+		@extend .container;
+		div{
+			@extend .row;			
+			div.line1{ 
+				@extend .row;
+				 @include setXSandSMandMDandLG(1,1,1,1);
+				div.line2{ 
+				@extend .row;
+					 @include setXSandSMandMDandLG(4,4,4,4);
+					div.line3{ 
+					@extend .row;
+						 @extend .footer-left-pink;
+						 @include setXSandSMandMDandLG(10,10,10,10);
+						div.line4{ 
+						@extend .row;
+							@include setXSandSMandMDandLG(8,8,8,8);
+							div.line5{ 
+							@extend .row;
+								@include setXSandSMandMDandLG(12,12,12,12);								
+								@extend .footer-left-pink;
+								}
+							}
+						div.line6{ 
+							 @include setXSandSMandMDandLG(4,4,4,4);
+							 @extend .footer-right-blue;	
+							}
+						}
+					div.line7{ 	
+						@include setXSandSMandMDandLG(2,2,2,2);
+						div.line10{ 	
+						@include setXSandSMandMDandLG(6,6,6,6);
+							@extend .footer-left-pink;	
+						}
+						div.line11{ 	
+						@include setXSandSMandMDandLG(6,6,6,6);
+							@extend .footer-left-white;		
+						}		
+						}
+					}
+				div.lin8{
+					@include setXSandSMandMDandLG(8,8,8,8);
+					div.line12{ 	
+						@include setXSandSMandMDandLG(1,1,1,1);
+						div.line14{ 	
+						@include setXSandSMandMDandLG(1,1,1,1);
+							
+						}
+						div.line15{ 	
+							@include setXSandSMandMDandLG(11,11,11,11);	
+							div.line16{ 	
+								@include setXSandSMandMDandLG(11,11,11,11);	
+								div.line18{ 	
+								@include setXSandSMandMDandLG(5,5,5,5);	
+									
+								}
+								div.line19{ 	
+									@include setXSandSMandMDandLG(7,7,7,7);
+								@extend .footer-right-blue;		
+								}
+								
+							}
+							div.line17{ 	
+								@include setXSandSMandMDandLG(1,1,1,1);
+							@extend .footer-right-blue;		
+							}				
+						}			
+						}
+					div.line13{ 	
+					@include setXSandSMandMDandLG(11,11,11,11);	
+					@extend .footer-right-blue;		
+					}		
+					}
+				}
+			div.line9{ 	
+				@include setXSandSMandMDandLG(11,11,11,11);			
+				 @extend .footer-right-blue;
+				}		
+			}
+		div{
+			@extend .row;
+			@include setXSandSMandMDandLG(12,12,12,12);
+			ol{
+				@extend .breadcrumb;
+				@extend .footer-links;
+				li.ListFirst1{
+				@extend .footer-links-headertext;  
+				}
+				li.ListFirst2{ 
+					ol{
+						@extend .breadcrumb; 
+						@extend .site-features; 
+						}				
+					}
+			}
+			}
+		div{
+			@extend .row;
+			@include setXSandSMandMDandLG(12,12,12,12);
+			ol{ 
+			@extend .footer-links; 
+			@extend .breadcrumb;
+			li.ListFirst3{ 
+				@extend .footer-links-headertext;				
+				}
+			li.ListFirst4{ 
+				ol{
+					@extend .breadcrumb; 
+					@extend .site-features; 
+					}		
+				}
+			}
+			}
+		div{
+			@extend .row;
+			@include setXSandSMandMDandLG(12,12,12,12);
+			ol{ 
+			@extend .footer-links; 
+			@extend .breadcrumb;
+			li.ListFirst5{ 
+				@extend .footer-links-headertext;				
+				}
+			li.ListFirst6{ 
+				ol{
+					@extend .breadcrumb; 
+						@extend .site-features; 	
+					}		
+				}
+			}
+			}
+        div.bhomes-footer-logo{ 
+		   div#row{ 
+		   @extend .row;
+		       div#footer-brand{ 
+			   	@include setXSandSMandMDandLG(2,2,2,2);	
+				a{ 
+					@extend .navbar-brand;
+					@extend .navbar-brand_custom;
+					}	
+			   }			    			  
+			   div#footer-contact{ 
+			   	@include setXSandSMandMDandLG(5,5,5,5);
+				@include setXSandSMandMDandLGoffset(5,5,5,5);
+				ol#footerContacts{
+					@extend .breadcrumb;
+					@extend .bhomes-contacts;
+					
+					}
+			   }			
+		   }  
+		}
+		div#footerHr{ 
+			@extend .row;
+			@extend .footer-hr-section;
+			div#hr_Line{
+				@extend .footer-hr;
+				@include setXSandSMandMDandLG(12,12,12,12);
+				}	
+			}
+		div#hr_footer_tags_div{ 
+			@extend .row;
+			@extend .footer-hr-section-tags;
+			@extend .footer-tags;
+			div#hr_footer_tags_div_div1{
+					@include setXSandSMandMDandLG(4,4,4,4);
+								ol#hr_footer_tags_div_div1_ol{
+					@extend .breadcrumb;
+					@extend .bhomes-footer-tags;
+
+					}
+				}
+			div#hr_footer_tags_div_div3{	
+				@include setXSandSMandMDandLG(3,3,3,3);
+				}
+			div#hr_footer_tags_div_div2{ 
+				@include setXSandSMandMDandLG(5,5,5,5);
+			
+				 @extend .right-alignment; 		
+				
+				div#hr_footer_tags_div_div2_div1{				 		
+					@include make-lg-column(3);
+					
+					}
+
+div#hr_footer_tags_div_div2_div2{				 		
+					@include make-lg-column(9);
+					//@include make-lg-column-offset(3);
+					  
+					}				}
+			}
+		}
+	}
+section.search-control {
+	@extend .container;
+	div.searchContainer{
+		@extend .row;
+		@extend .main-search;
+		div.search-textbox {
+			@include setXSandLG(12,8);
+			@extend .row;
+			div.enterLocation{
+				@extend .btn-group;
+				@extend .bhomes-btn-group;
+				@include setXSandLG(12,12);
+				input{ 
+					@extend .btn;
+					@extend .main-search-enterLocation;
+					@include setXSandLG(8,8);
+					}
+				div.icons{
+					button.ddl{ 
+						@media(min-width: $screen-phone) {
+						  border-radius:2px;
+						}	
+						@extend button;
+						@extend .btn;
+						@extend .btn-default;
+						@extend .dropdown-toggle;
+						span{ 
+							@extend .caret;
+							}						
+						}
+					ul.dropdown-menu{ 
+						//@extend .dropdown-menu;
+						@extend .ddlserviceType;
+						}
+					}
+				}
+				
+			}
+		div.search-ranges-button-container {
+			@include setXSandLG(12,4);
+		    div.search-ranges-button {
+		       @include make-row();
+		       div.search-ranges {
+		           @include setXSandLG(12,8);				    
+		           @media(min-width: $screen-desktop) {
+		               right: 200%;
+		           }		
+		            div.newline {
+		                // @extend .hidden-xs;
+		            }
+		
+		            div.search-ranges-controls {
+		                 @extend .row;
+		
+		                @media(min-width: $screen-desktop) {
+		                    width: 339%;
+		                }
+		
+		
+		                div.search-ranges-category {
+		                    @include setXSandLG(6,4);
+		                }
+		                div.search-ranges-bedroom{
+		                    @include setXSandLG(6,4);
+		                    @include make-lg-column-push(4);
+		                }
+		                 div.search-ranges-price{
+		                    @include setXSandLG(12,4);
+		                    @include make-lg-column-pull(4);
+		                }
+		            }
+		        }
+		    div.search-button {
+		            @include setXSandLG(12,4);
+		        }
+		    }
+		}
+	}
+}
+section.homepage_background_image{
+	@extend .container;
+	div{
+	@extend	.dvcontainer;
+		}
+}
+section.mainbody {
+   @extend .container;	
+	section.maincontent{
+   @extend .container;
+	}	
+}
+
+
+
+
+
+

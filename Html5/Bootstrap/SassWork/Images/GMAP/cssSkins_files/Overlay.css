@@ -1,0 +1,12 @@
+﻿.plusback{background-image:url(/images/GMAP/Images/Navigator/plusback.gif); background-repeat:no-repeat; width:75px; height:75px; margin:20px 0px 0px 114px; float:left;}
+.toparrow{padding:5px 0px 0px 29px; width:70px; float:left;}
+.leftarrow{padding:5px 0px 0px 4px; float:left;}
+.centerpoint{padding:5px 0px 0px 9px; float:left;}
+.rightarrow{padding:5px 0px 0px 10px; float:left;}
+.bottomarrow{padding:7px 0px 0px 29px; float:left;}
+
+.slider{background-image:url(/images/GMAP/Images/Navigator//slider.gif); background-repeat:no-repeat; width:24px; height:90px; margin:100px 0px 0px 140px;}
+.plus{padding:4px 0px 0px 4px; width:24px; float:left;}
+.knobdiv{padding:0px 0px 0px 5px; width:24px; float:left;}
+.minus{padding:24px 0px 0px 5px; width:24px; float:left;}
+.extradiv{padding:5px 0px 0px 0px; }

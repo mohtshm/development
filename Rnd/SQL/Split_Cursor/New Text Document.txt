@@ -1,0 +1,34 @@
+
+
+declare @googlecoordinate int
+
+DECLARE googlecoordinate_cursor CURSOR FOR 
+select top 550 pro_google_coordinates from googlecordinatetable where  countryid = 92 order by  updatedDate desc
+
+OPEN googlecoordinate_cursor
+ FETCH NEXT FROM googlecoordinate_cursor
+INTO @googlecoordinate
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+  
+	SELECT SUBSTRING('35.6565656,46.232323', 1, CHARINDEX(',', '35.6565656,46.232323') -1)
+SELECT SUBSTRING('35.656565886,46.23232333', CHARINDEX(',', '35.656565886,46.2323233')+1, len('35.656565886,46.2323233') )
+	
+	SELECT @err = @@error IF @err <> 0 BREAK
+      IF @@fetch_status <> 0
+         BREAK
+	
+
+						      
+      
+   FETCH NEXT FROM googlecoordinate_cursor
+   INTO @googlecoordinate
+
+
+END
+
+CLOSE googlecoordinate_cursor
+deallocate googlecoordinate_cursor
+
+	  PRINT @googlecoordinate

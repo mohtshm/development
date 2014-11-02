@@ -1,0 +1,72 @@
+/* CSS Document */
+
+body{margin:0px; padding:0px; font-family:Tahoma; font-size:11px;}
+a 		{border:none; outline:none; color:#010F7A; text-decoration:none;}
+a:hover {border:none; outline:none; color:#CA0074; text-decoration:none;}
+a:active{border:none; outline:none;}
+a img 	{border:none; outline:none;}
+.headerbg{background:#002384;}
+.mainPadding{padding:25px;}
+.mainHeading{color:#FFFFFF; font-size:22px;}
+h3{font-size:14px; font-weight:bold;margin:0px;padding:0px;}
+h3 A{font-size:14px; font-weight:bold;margin:0px;padding:0px;color:#000000;}
+h3 A:hover{text-decoration:none;}
+.fill{background:#CCCCCC}
+.rowFill{background:#F2F2F2;}
+.rowFill2{background:#FFFFFF;}
+.paddingLeft{padding-left:15px; padding-top:2px; padding-bottom:2px;}
+.marginLeft{padding-left:15px; padding-top:0px; padding-bottom:0px;}
+.paddingRight{padding-right:15px; padding-top:2px; padding-bottom:2px;}
+.marginRight{padding-right:15px; padding-top:2px; padding-bottom:2px;}
+.input{font-size:11px; font-family:Tahoma; border:1px solid #CACACA;}
+select{font-size:11px; font-family:Tahoma;}
+.mainContent{}
+.footer{background:#002384;color:#FFFFFF;}
+.white{color:#FFFFFF;}
+.white A{color:#FFFFFF;}
+.heading{font-size:16px; color:#dc007a; font-weight:bold;}
+.bullet-right{font-size:14px; font-weight:bold; color:#d90078;}
+.clearText{font-family:Tahoma;font-size:11px;letter-spacing:.5px;}
+td{font-family:Tahoma; font-size:12px;}
+.header-bg{background-image: url(header-bg.jpg);background-repeat: repeat-x;}
+.arialwhite10{font-family: Tahoma, Verdana, Arial;;font-size: 10px;color: #FFFFFF;}
+a.head:link{font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #C6CAF9;text-decoration: none;	background-repeat: no-repeat;background-position: left;}
+a.head:visited{	font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #C6CAF9;text-decoration: none;	background-repeat: no-repeat;background-position: left;}
+a.head:hover{	font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #FBAFDB;text-decoration: none; background-repeat: no-repeat;background-position: left;}
+.btnbg{background-image: url(button-bg.jpg);background-repeat: no-repeat;}
+.btnbgbig{background-image: url(button-bg2.jpg);background-repeat: no-repeat;}
+.bgheader{background-image: url(bgheader.gif);background-repeat: repeat-x;background-position: left bottom;}
+.footer-img1{background-image: url(footer-img1.jpg);background-repeat: repeat-x;}
+.footer-img2{background-image: url(footer-img2.jpg);background-repeat: repeat-x;}
+.aialfootfont{font-family: Tahoma, Verdana, Arial;;font-size: 10px;color: #D4007F;}
+
+.navbg{color:#010F7A; font-weight:bold;text-align:center;}
+.navbg A{color:#010F7A; font-weight:bold;text-align:center;}
+.navbg A:Hover{color:#FFFFFF; font-weight:bold;text-align:center;}
+
+.navbgselected{background-color:#010F7A;color:#FFFFFF;font-size:11px; font-weight:bold;text-align:center;}
+.navbgselected A{color:#FFFFFF; text-decoration:none;}
+.navbgselected A:hover{color:#FFFFFF; text-decoration:none;}
+
+form{margin:0px;padding:0px;}
+.tabselected{background:#f2f2f2; border:1px solid #c0c0c0; border-bottom:none;border-collapse:collapse;font-weight:bold;height:30px;vertical-align:middle;padding-top:10px;}
+.tab{background:#FFFFFF; border:1px solid #EAEAEA; border-bottom:1px solid #c0c0c0; border-collapse:collapse;height:22px; vertical-align:middle;padding-top:8px;}
+.tabempty{border-bottom:1px solid #c0c0c0; }
+.divSelected{margin:1px 0px 1px 15px;padding:2px 4px; border:1px solid #e2e2e2;background:#faffed;cursor:hand;}
+.drawBorder{margin:1px 0px 1px 15px;padding:2px 4px;border:1px solid #eeeed4;cursor:hand;background:#fffff4;color:#5f5f5f;}
+.previewDiv{margin:1px 0px 1px 15px;padding:2px 4px; border:1px solid #F8F8F8;cursor:hand;color:#8e8e8e;}
+.noUnderline{text-decoration:none;}
+.previewContainer{padding:15px;font-family:Courier New;background:#f8f8f8;font-size:14px;}
+.containerControls{width:10px;border-left:1px dashed #C0C0C0;padding:15px;font-size:15px;font-weight:bold;}
+.input2{border:1px solid #7f9db9; font-family:Courier New;}
+.dHeight{height:195px;display:none;border-bottom:none;position:absolute;z-index:255;min-width:233px;width:233px;}
+.dHeight2{height:215px;display:none;border-bottom:none;position:absolute;z-index:255;min-width:233px;width:233px;}
+.dFill{background:#CCCCCC; padding:1px;z-index:256;}
+.divFill{background:#F2F2F2;padding:2px 4px;margin:1px 0px;font-weight:bold;}
+.divFill2{background:#FFFFFF;padding:2px 4px;}
+.editModeSaveButton2{position:relative;float:right; bottom:1px; right:0px; width:40px;text-align:center;min-width:40px;z-index:2;background:#f7f7f7;border:1px solid #CCCCCC;padding:2px 5px;display:block;font-size:11px;font-family:Verdana;font-weight:bold;color:#333399;}
+.editModeSaveButton2:hover{background:#dff1ff;border:1px solid #316ac5;color:#333399;font-size:11px;}
+.editModeSaveButton{position:relative;float:right; bottom:2px; right:1px; width:40px;text-align:center;min-width:40px;z-index:2;background:#f7f7f7;border:1px solid #696969;padding:2px 5px;display:block;font-size:11px;font-family:Verdana;font-weight:bold;color:#333399;}
+.editModeSaveButton:hover{background:#dff1ff;border:1px solid #316ac5;color:#333399;font-size:11px;}
+.statusDiv{background:#FF0000; border:1px solid #000000; color:#FFFFFF; padding:3px 5px;position:absolute; z-index:255; top:0px; right:2px;font-weight:bold;}
+

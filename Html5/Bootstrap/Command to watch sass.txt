@@ -1,0 +1,10 @@
+//first locate an input file in the sass folder named as /stylesheets/styles.css
+D:\Bhomes_Bootstrp\bhomesbssass\sass>sass styles.scss ../stylesheets/styles.css
+//second step is to compile/watch in that input files 
+
+
+
+D:\Bhomes_Bootstrp\bhomesbssass\sass>sass --watch styles.scss:../stylesheets/styles.css
+>>> Sass is watching for changes. Press Ctrl-C to stop.
+      write ../stylesheets/styles.css
+      write ../stylesheets/styles.css.map
