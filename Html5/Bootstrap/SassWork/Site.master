@@ -60,9 +60,17 @@
                             <li class="navbar_ul_li_lg"><a id="A8" class="h4" runat="server" href="#">Search                      
                                 <div class="header-line"></div>
                             </a></li>
-                            <li class="navbar_ul_li_xs"><a id="A1" class="h4" runat="server" href="#">Buy                      
-                                <span>(+)</span><div class="header-line"></div>
-                            </a></li>
+                            <li class="navbar_ul_li_xs dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Buy<span class="caret"></span><div class="header-line"></div></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Residential Guide<div class="header-line"></div></a></li>                                    <li><a href="#">Commercial Guide<div class="header-line"></div></a></li>                                    <li><a href="#">Enquiries<div class="header-line"></div></a></li>                                    <li><a href="#">Separated link<div class="header-line"></div></a></li>                                    <li class="navbar_ul_li_xs dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Local Insights <span class="caret"></span><div class="header-line"></div></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Deira District<div class="header-line"></div></a></li>                                            <li><a href="#">Dubai land<div class="header-line"></div></a></li>                                            <li><a href="#">Palm Jumeriah<div class="header-line"></div></a></li>                                            <li><a href="#">Walt Disney<div class="header-line"></div></a></li>                                            <li><a href="#">Slander<div class="header-line"></div></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="navbar_ul_li_xs"><a id="A2" class="h4" runat="server" href="#">Rent                   
                                 <span>(+)</span><div class="header-line"></div>
                             </a></li>
