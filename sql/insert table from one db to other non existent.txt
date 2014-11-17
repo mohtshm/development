@@ -1,0 +1,20 @@
+SELECT  [name] FROM [bhomes].[sys].[objects] WHERE [type] = 'U' and [name] not in (
+SELECT  [name] FROM [bhomesupdated].[sys].[objects] WHERE [type] = 'U' )
+
+DECLARE @tname VARCHAR(150)
+DECLARE @strsql VARCHAR(300)
+ 
+SELECT @tname = (SELECT TOP 1 [name] FROM [bhomes].[sys].[objects] WHERE [type] = 'U' and [name] not in (
+SELECT  [name] FROM [bhomesupdated].[sys].[objects] WHERE [type] = 'U' ) ORDER BY [name])
+ 
+WHILE @tname IS NOT NULL
+BEGIN
+    SELECT @strsql = 'Select * into [bhomesupdated].[dbo].[' + RTRIM(@tname) +'] from [dbo].[' + RTRIM(@tname) +']'
+    print @strsql
+	--EXEC (@strsql)
+    PRINT 'insert Table : ' + @tname
+	SELECT @tname = (SELECT TOP 1 [name] FROM [bhomes].[sys].[objects] WHERE [type] = 'U'  AND [name] > @tname  and [name] not in (
+SELECT  [name] FROM [bhomesupdated].[sys].[objects] WHERE [type] = 'U' ) ORDER BY [name])
+
+    
+END
