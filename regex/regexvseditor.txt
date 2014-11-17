@@ -1,0 +1,18 @@
+
+        string allSliderData = System.Text.RegularExpressions.Regex.Replace(JsonHelper.JsonSerializer(allRanges), "(\\\"<ModelStatus>k__BackingField\\\":\\d,|,\\\"SliderId\\\":\\d|,\\\"MaxValue\\\":\\\"(\\d)\\\"|,\\\"MinValue\\\":\\\"(\\d)\\\"|,\\\"SliderType\\\":\\d)", string.Empty);
+	
+	
+	for matching mutli empty lines
+	^[\n\r][\s]*$
+	
+	
+	for matching two lines  after curly bracket
+	}(\s)*\n\n
+	replace it with single line
+	}\n
+	
+	
+	matching ; with two line
+	;\s*\n\n\s*}
+	replace with 
+	;\n}
