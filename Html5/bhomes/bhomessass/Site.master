@@ -1,0 +1,439 @@
+﻿<%@ Master Language="VB" CodeFile="Site.master.vb" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--<link href="sass/styles.css" rel="stylesheet" />--%>
+    <link href="stylesheets/styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="dvrow">
+                <div id="top">
+                    <div class="headerTop">
+                        <div class="bhomesTopLeftLogo">
+                            <a class="bhomesLogo" href="#">
+                                <img class="header_image"/></a>
+                        </div>
+                        <div id="top_contactno">
+                            <p>+971 600 52 2212</p>
+                        </div>
+                    </div>
+                    <div class="headerNavBar">
+                        <div class="menuButton">
+                            <div class="btns">
+                                <button type="button" class="btn" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="menuMobileLine">Menu</div>
+                        </div>
+                    </div>
+                    <div class="headerTopLinks">
+                        <div class="linksRow">
+                            <div class="signInSignUp">
+                                <p>
+                                    <a href="#">Sign in</a>&nbsp;
+                                <span class="textSeparartor">|</span>
+                                    &nbsp;<a href="#" class="SingInLink2">Join&nbsp;Today</a>
+                                </p>
+                            </div>
+                            <div class="countryReference">
+                                <p>
+                                    <a href="#">UAE<img src="images/flags/UAE.gif" />
+                                    </a>
+                                </p>
+                            </div>
+                            <div id="btns_MenuIcon">
+                                <div class="dvMenu_lines"></div>
+                                <div class="dvMenu_lines"></div>
+                                <div class="dvMenu_lines"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbarheader">
+                    <nav class="navbar-collapse">
+                        <ul>
+                            <li class="navbar_ul_li_xs">
+                                <a id="A1" runat="server" href="#">Search 
+                                   <div class="header-line"></div>
+                                </a></li>
+                            <li class="navbar_ul_li_lg">
+                                <a href="#" data-toggle="dropdown">Buy                      
+                                <span>(+)</span>
+                                    <div class="header-line"></div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#" data-toggle="dropdown">Residential Buyer's Guide                      
+                                      <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A2" data-toggle="dropdown" runat="server" href="#">Commercial Buyer's Guide                         
+                                      <div class="header-line"></div>
+                                    </a>
+                                    </li>
+                                    <li><a id="A3" data-toggle="dropdown" runat="server" href="#">My Saved Searches                        
+                                     <div class="header-line"></div>
+                                    </a>
+                                    </li>
+                                    <li><a id="A4" data-toggle="dropdown" runat="server" href="#">Enquires                      
+                                      <div class="header-line"></div>
+                                    </a>
+                                    </li>
+                                    <li class="dropdown"><a href="#" data-toggle="dropdown">Local Insight
+                                        <span>(+)</span><div></div>
+                                    </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a id="A8" data-toggle="dropdown" runat="server" href="#">Dubailand District
+                                                    <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A9" data-toggle="dropdown" runat="server" href="#">Al Awir District
+                                                    <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A10" data-toggle="dropdown" runat="server" href="#">Emirates Living District
+                                                    <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A11" data-toggle="dropdown" runat="server" href="#">Jebel Ali District 
+                                              <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A12" data-toggle="dropdown" runat="server" href="#">Jumeirah District
+                                                <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A13" data-toggle="dropdown" runat="server" href="#">Creek District
+                                                    <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A14" data-toggle="dropdown" runat="server" href="#">Marina District<div></div>
+                                            </a></li>
+                                            <li><a id="A15" data-toggle="dropdown" runat="server" href="#">Meydan District<div></div>
+                                            </a></li>
+                                            <li><a id="A16" data-toggle="dropdown" runat="server" href="#">Mirdif  District
+                                                    <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A17" data-toggle="dropdown" runat="server" href="#">Palm Deira District
+                                               <div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A18" data-toggle="dropdown" runat="server" href="#">Palm Jumeriah Island Dubai<div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A19" data-toggle="dropdown" runat="server" href="#">Waterfront District<div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A20" data-toggle="dropdown" runat="server" href="#">Dubai World Central Districtv<div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A21" data-toggle="dropdown" runat="server" href="#">Bur Dubai District<div class="header-line"></div>
+                                            </a></li>
+                                            <li><a id="A22" data-toggle="dropdown" runat="server" href="#">Downtown District</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar_ul_li_lg"><a href="#" data-toggle="dropdown">Rent                   
+                                <span>(+)</span>
+                                <div class="header-line"></div>
+                            </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a id="A5" data-toggle="dropdown" runat="server" href="#">Residential Tenant's Guide                      
+                                       <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A6" data-toggle="dropdown" runat="server" href="#">Commercial Tenant's Guide                         
+                                      <div class="header-line"></div>
+                                    </a>
+                                    </li>
+                                    <li><a id="A7" data-toggle="dropdown" runat="server" href="#">My Saved Searches                        
+                                      <div class="header-line"></div>
+                                    </a>
+                                    </li>
+                                    <li><a id="A23" data-toggle="dropdown" runat="server" href="#">Enquires                      
+                                       <div class="header-line"></div>
+                                    </a>
+                                    </li>
+                                    <li class="navbar_ul_li_xs dropdown"><a href="#" data-toggle="dropdown">Local Insight<span>(+)</span><div></div>
+                                    </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a id="A24" data-toggle="dropdown" runat="server" href="#">Bur Dubai District<div></div>
+                                            </a></li>
+                                            <li><a id="A25" data-toggle="dropdown" runat="server" href="#">Downtown District<div></div>
+                                            </a></li>
+                                            <li><a id="A26" data-toggle="dropdown" runat="server" href="#">Deira District 
+                                                <div></div>
+                                            </a></li>
+                                            <li><a id="A27" data-toggle="dropdown" runat="server" href="#">Dubailand District<div></div>
+                                            </a></li>
+                                            <li><a id="A28" data-toggle="dropdown" runat="server" href="#">Al Awir District<div></div>
+                                            </a></li>
+                                            <li><a id="A29" data-toggle="dropdown" runat="server" href="#">Emirates Living District<div></div>
+                                            </a></li>
+                                            <li><a id="A30" data-toggle="dropdown" runat="server" href="#">Jebel Ali District
+                                                <div></div>
+                                            </a></li>
+                                            <li><a id="A31" data-toggle="dropdown" runat="server" href="#">Jumeirah District
+                                                <div></div>
+                                            </a></li>
+                                            <li><a id="A32" data-toggle="dropdown" runat="server" href="#">Creek District<div></div>
+                                            </a></li>
+                                            <li><a id="A33" data-toggle="dropdown" runat="server" href="#">Marina District<div></div>
+                                            </a></li>
+                                            <li><a id="A34" data-toggle="dropdown" runat="server" href="#">Meydan District<div></div>
+                                            </a></li>
+                                            <li><a id="A35" data-toggle="dropdown" runat="server" href="#">Mirdif  District<div></div>
+                                            </a></li>
+                                            <li><a id="A36" data-toggle="dropdown" runat="server" href="#">Palm Deira District
+                                                <div></div>
+                                            </a></li>
+                                            <li><a id="A37" data-toggle="dropdown" runat="server" href="#">Palm Jumeriah Island Dubai
+                                                <div></div>
+                                            </a></li>
+                                            <li><a id="A38" data-toggle="dropdown" runat="server" href="#">Waterfront District<div></div>
+                                            </a></li>
+                                            <li><a id="A39" data-toggle="dropdown" runat="server" href="#">Dubai World Central District</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar_ul_li_lg"><a href="#" data-toggle="dropdown">Sell                   
+                                <span>(+)</span>
+                                <div class="header-line"></div>
+                            </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a id="A40" data-toggle="dropdown" runat="server" href="#">List your Property
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A41" data-toggle="dropdown" runat="server" href="#">Make your Property Stand Out
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A42" data-toggle="dropdown" runat="server" href="#">Residential Seller Guide
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A43" data-toggle="dropdown" runat="server" href="#">Commercial Seller Guide</a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar_ul_li_lg"><a href="#" data-toggle="dropdown">Landlords              
+                               <span>(+)</span>
+                                <div class="header-line"></div>
+                            </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a id="A44" data-toggle="dropdown" runat="server" href="#">List your Property
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A45" data-toggle="dropdown" runat="server" href="#">Make your Property Stand Out
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A46" data-toggle="dropdown" runat="server" href="#">Landlord’s Guide</a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar_ul_li_lg">
+                                <a href="#" data-toggle="dropdown">Property&nbsp;Management<span>(+)</span><div class="header-line"></div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Property Management Services
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a href="#">Why use our Service?</a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar_ul_li_lg"><a id="A47" runat="server" href="#">Short&nbsp;Stays       
+                                <span></span>
+                                <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_lg"><a href="#" data-toggle="dropdown">About Us                
+                               <span>(+)</span>
+                                <div class="header-line"></div>
+                            </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a id="A48" data-toggle="dropdown" runat="server" href="#">Meet The Team
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A49" data-toggle="dropdown" runat="server" href="#">Our Branches
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A50" data-toggle="dropdown" runat="server" href="#">Enquiries
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A51" data-toggle="dropdown" runat="server" href="#">Why use Better Homes?
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A52" data-toggle="dropdown" runat="server" href="#">Marketing
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a id="A53" data-toggle="dropdown" runat="server" href="#">Careers
+                                            <div class="header-line"></div>
+                                    </a></li>
+                                    <li><a href="#" data-toggle="dropdown">Preferred Partners </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a id="A54" data-toggle="dropdown" runat="server" href="#">Become a Partner<div></div>
+                                            </a></li>
+                                            <li><a id="A55" data-toggle="dropdown" runat="server" href="#">Partner Directory<div></div>
+                                            </a></li>
+                                            <li><a id="A56" data-toggle="dropdown" runat="server" href="#">Partner Benifits<div></div>
+                                            </a></li>
+                                            <li><a id="A57" data-toggle="dropdown" runat="server" href="#">Get a Quote</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a id="A58" data-toggle="dropdown" runat="server" href="#">Blog<div></div>
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar_ul_li_xs"><a id="A59" data-toggle="dropdown" runat="server" href="#">Social
+                                    <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A60" data-toggle="dropdown" runat="server" href="#">Blog
+                                    <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A61" data-toggle="dropdown" runat="server" href="#">Facebook
+                                    <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A62" data-toggle="dropdown" runat="server" href="#">Twitter
+                                    <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A63" data-toggle="dropdown" runat="server" href="#">Google +
+                                    <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A64" data-toggle="dropdown" runat="server" href="#">Linkedin
+                                    <div class="header-line"></div>
+                            </a></li>
+                            <li class="navbar_ul_li_xs"><a id="A65" data-toggle="dropdown" runat="server" href="#">Subscribe</a></li>
+                        </ul>
+                    </nav>
+                  
+                </div>
+                  <div class="dv_xs_line"></div>
+            </div>
+        </div>
+    </header>
+    <section class="mainbody">
+        <section class="maincontent">
+            <form id="Form1" runat="server">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+        </section>
+        <footer>
+            <div class="footer_container">
+                <div class="row">
+                    <div class="line1">
+                        <div class="line2">
+                            <div class="line3 ">
+                            </div>
+                            <div class="line7 ">
+                                <div class="line10"></div>
+                                <div class="line11"></div>
+                            </div>
+                        </div>
+                        <div class="lin8">
+                            <div class="line12">
+                                <div class="line14">
+                                </div>
+                                <div class="line15">
+                                    <div class="line16">
+                                        <div class="line18">
+                                        </div>
+                                        <div class="line19">
+                                        </div>
+                                    </div>
+                                    <div class="line17">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line13">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line9"></div>
+                </div>
+                <div>
+                    <ol>
+                        <li class="ListFirst1">Site Features</li>
+                        <li class="ListFirst2">
+                            <ol>
+                                <li><a href="#">Why use Better Homes?</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Preferred Partners</a></li>
+                                <li><a href="#">Our Agents</a></li>
+                                <li><a href="#">Our Branches</a></li>
+                                <li><a href="#">Email Alerts</a></li>
+                                <li><a href="#">Make an Offer</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <ol>
+                        <li class="ListFirst3">Useful Links</li>
+                        <li class="ListFirst4">
+                            <ol>
+                                <li><a href="#">List your property</a></li>
+                                <li><a href="#">Online Magazine</a></li>
+                                <li><a href="#">Buy</a></li>
+                                <li><a href="#">Rent</a></li>
+                                <li><a href="#">Sell</a></li>
+                                <li><a href="#">UAE Overview</a></li>
+                                <li><a href="#">Dubai Properties</a></li>
+                                <li><a href="#">Abu Dhabi Properties</a></li>
+                                <li><a href="#">RERA</a></li>
+                                <li><a href="#">Ejari</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <ol>
+                        <li class="ListFirst5">Get Social</li>
+                        <li class="ListFirst6">
+                            <ol>
+                                <li><a href="#">Subscribe to Mailers</a></li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Linkedin</a></li>
+                                <li><a href="#">Google+</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div class="bhomes-footer-logo">
+                    <div id="row">
+                        <div id="footer-brand">
+                            <a href="#">
+                                <img src="images/bh-btm.jpg" />
+                            </a>
+                        </div>
+                        <div id="footer-contact">
+                            <ol id="footerContacts">
+                                <li>+971 600 52 2212</li>
+                                <li><a href="#">customercare@bhomes.com</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div id="footerHr">
+                    <div id="hr_Line"></div>
+                </div>
+                <div id="hr_footer_tags_div">
+                    <div id="hr_footer_tags_div_div1">
+                        <ol id="hr_footer_tags_div_div1_ol">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Useful Links</a></li>
+                        </ol>
+                    </div>
+                    <div id="hr_footer_tags_div_div3"></div>
+                    <div id="hr_footer_tags_div_div2">
+                        <div id="hr_footer_tags_div_div2_div1"></div>
+                        <div id="hr_footer_tags_div_div2_div2">Better Homes Properties 2014. All Rights Reserved</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <%--  <script src="javascripts/bootstrap.js"></script>--%>
+    <script src="javascripts/bhomes.js"></script>
+</body>
+</html>

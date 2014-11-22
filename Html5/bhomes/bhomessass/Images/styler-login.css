@@ -1,0 +1,58 @@
+html, body {margin:0; padding:0; height:100%; width:100%;}
+body {font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#beb9c0;    margin-top: 9%;}
+a 		{text-decoration:none; border:none; outline:none; color:#C9317C;}
+a:hover {text-decoration:none; border:none; outline:none; color:#DB82B0;}
+a:active{text-decoration:none; border:none; outline:none;}
+a img 	{border:none; outline:none;}
+p, form, ul, li {margin:0; padding:0; list-style-type:none;}
+h1, h2, h3, h4, h5, h6 {padding:0; margin:0; font-weight:normal;}
+input{font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+
+.main-wrapper {width:100%;}
+.wrapper {width:720px; margin:0 auto; padding:0px;}
+.clear {clear:both; height:1px; overflow:hidden; line-height:1%; font-size:0px; margin-bottom:-1px;}
+.pink-color{color:#c8317e;}
+.pink2-color{color:#ff97c8;}
+
+/* ------- Top CSS Section ------- */
+.top-logo{margin:0px; padding:0px; text-align:center;}
+.top-logo2{background-color:#0f0a11; margin:0px; padding:0px; text-align:center;}
+/* ------- Top CSS Section ------- */
+
+/* ------- Main CSS Section ------- */
+.main-login{width:720px; margin:0px; padding:0px; 
+  background: #1e5799; /* Old browsers */
+    margin: 0px auto 0; /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2U2MTk0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDAyZDcyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top, #1e5799 0%, #3e6194 0%, #002d72 50%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e5799), color-stop(0%, #3e6194), color-stop(50%, #002d72)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1e5799 0%, #3e6194 0%, #002d72 50%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1e5799 0%, #3e6194 0%, #002d72 50%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1e5799 0%, #3e6194 0%, #002d72 50%); /* IE10+ */
+    background: linear-gradient(to bottom, #1e5799 0%, #3e6194 0%, #002d72 50%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#002d72', GradientType=0 ); /* IE6-8 */
+}
+.main{width:300px; margin:0 auto; padding:0px; padding-top:28px; padding-bottom:32px;}
+.side-1{float:left; width:267px;}
+.side-2{float:left; width:87px; height:310px; background:url(/images/nl_dotline.gif) repeat-y;}
+.side-3{float:left; width:266px;}
+.heading-1{color:#c8317e; font-size:17px; padding-bottom:50px; text-align: center;}
+.heading-2{color:#c8317e; font-size:14px; padding-bottom:12px; margin-top:-2px;}
+.normal-input{float:right; background:#FFFFFF; width:160px; height:16px; border-top:1px solid #bbbbbb; border-bottom:none; border-left:1px solid #bbbbbb; border-right:none;}
+.input-border{float:right; border-top:1px solid #5f5367; border-right:1px solid #5f5465; border-bottom:1px solid #3e3641; border-left:1px solid #3e3641; padding:1px; width:161px;height:16px;}
+.input-text{float:left; color:#bfbac1; width:100px; padding-top:2px;}
+.dotline-2{background:url(/images/nl_dotline2.gif) repeat-x; height:17px; font-size:0px; line-height:0px;}
+.dotline-3{background:url(/images/nl_dotline3.gif) repeat-x; height:13px; font-size:0px; line-height:0px;}
+.captcha{ background:url(/images/nl_captcha-back.gif) no-repeat; float:right; width:165px; height:61px; font-size:0px;}
+.arrow{float:left; padding:5px 5px 0px 0px;}
+.text1{float:left; color:#FFFFFF;}
+.text2{float:left; color:#BEB9C0; padding-left:8px;}
+.text3{float:left; color:#FFFFFF; font-weight:bold; font-size:12px; padding-left:8px;}
+/* ------- Main CSS Section ------- */
+
+/* ------- Bottom CSS Section ------- */
+.main-bottom {background:url(/images/nl_bottom-back.gif) no-repeat;	width:720px; height:92px; color:#b0a1c0; margin:0px; padding:0px;}
+.copyright{float:left; margin:0px; padding:36px 0px 0px 51px; width:286px;}
+.b-support{float:right; margin:0px; padding:36px 49px 0px 0px; text-align:right;}
+.b-logo{float:left; padding-top:29px;}
+/* ------- Bottom CSS Section ------- */

@@ -1,0 +1,108 @@
+//first locate an input file in the sass folder named as /stylesheets/styles.css
+D:\Bhomes_Bootstrp\bhomesbssass\sass>sass styles.scss ../stylesheets/styles.css
+//second step is to compile/watch in that input files 
+
+
+
+D:\Bhomes_Bootstrp\bhomesbssass\sass>sass --watch styles.scss:../stylesheets/styles.css
+>>> Sass is watching for changes. Press Ctrl-C to stop.
+      write ../stylesheets/styles.css
+      write ../stylesheets/styles.css.map
+
+sass --style compressed --watch styles.scss:../stylesheets/styles.css
+
+We can also watch a specific file rather than the directory, with this command line;
+D:\Bhomes_Bootstrp\bhomesbssass\sass>sass --watch ../stylesheets/styles.css  
+
+Strategies for Compiling Stylesheets for Production
+
+Option A: Use the compass production defaults.
+compass compile -e production --force
+Note: This only changes the compass defaults, options you've specified explicitly in your configuration will not be changed.
+
+Option B: Override your configuration file settings on the command line
+compass compile --output-style compressed --force
+
+Option C: Create a separate configuration file for production
+cp config.rb prod_config.rb
+
+..edit prod_config.rb to suit  your needs..
+compass compile -c prod_config.rb --force
+
+
+
+
+
+
+to enable compass to compile the .scss file:
+
+D:\compass_sass>gem install bootstrap-sass
+Successfully installed bootstrap-sass-3.3.0.1
+Parsing documentation for bootstrap-sass-3.3.0.1
+Done installing documentation for bootstrap-sass after 0 seconds
+1 gem installed
+
+D:\compass_sass>gem install bundler
+Fetching: bundler-1.7.4.gem (100%)
+Successfully installed bundler-1.7.4
+Parsing documentation for bundler-1.7.4
+Installing ri documentation for bundler-1.7.4
+Done installing documentation for bundler after 3 seconds
+1 gem installed
+
+
+*********************************************************************
+Congratulations! Your compass project has been created.
+
+You may now add and edit sass stylesheets in the sass subdirectory of your proje
+ct.
+
+Sass files beginning with an underscore are called partials and won't be
+compiled to CSS, but they can be imported into other sass stylesheets.
+
+You can configure your project by editing the config.rb configuration file.
+
+You must compile your sass stylesheets into CSS when they change.
+This can be done in one of the following ways:
+  1. To compile on demand:
+     compass compile [path/to/project]
+  2. To monitor your project for changes and automatically recompile:
+     compass watch [path/to/project]
+
+More Resources:
+  * Website: http://compass-style.org/
+  * Sass: http://sass-lang.com
+  * Community: http://groups.google.com/group/compass-users/
+
+
+To import your new stylesheets add the following lines of HTML (or equivalent) t
+o your webpage:
+<head>
+  <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+
+
+
+////////////////
+D:\compass_sass\bhomessass>compass compile
+ modified config.rb
+    clean stylesheets
+   delete stylesheets/styles.css
+    write stylesheets/styles.css
+
+D:\compass_sass\bhomessass>compass watch
+>>> Compass is watching for changes. Press Ctrl-C to Stop.
+ modified sass/styles.scss
+    write stylesheets/styles.css
+ modified sass/styles.scss
+    write stylesheets/styles.css
+USEful Links:
+http://foundation.zurb.com/docs/sass-files.html
+http://thesassway.com/beginner/getting-started-with-sass-and-compass
+https://github.com/twbs/bootstrap-sass
+http://compass-style.org/help/documentation/command-line/
+http://twbscolor.smarchal.com/scss?bd=ffffff&bh=ffffff&cd=000080&ch=ff0080
+http://designshack.net/articles/css/7-awesome-emmet-html-time-saving-tips/
+http://www.hongkiat.com/blog/less-basic/

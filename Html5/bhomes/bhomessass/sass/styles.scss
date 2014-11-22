@@ -1,0 +1,2283 @@
+﻿//@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap-variables_customised";
+@import "bootstrap";
+$white: #fff;
+$color_biscay_approx: #233567;
+$color_red_violet_approx: #d30e7d;
+$color_mystic_approx: #dfe5ee;
+$color_silver_approx: #bfbfbf;
+$color_matisse_approx: #1e5799;
+$color_azure_approx: #3e6194;
+$color_catalina_blue_approx: #002d72;
+$black: rgb(0, 0, 0);
+$color_celeste_approx: #cccccc;
+$color_ship_cove_approx: #7e95b7;
+$color_horizon_approx: #5e7ba7;
+$color_chambray_approx: #33568e;
+$color_woodsmoke_approx: #0f0f0f;
+$color_nepal_approx: #8b9fbe;
+$color_steel_blue_approx: #407faa;
+$input-border: $white;
+$dropdown-link-hover-color: none;
+$color_blue: #223667;
+
+input {
+    border: none;
+}
+
+    input:focus {
+        border: none;
+    }
+
+    input:active {
+        border: none;
+    }
+
+%extend_1 {
+    height: inherit;
+    box-shadow: none;
+    background-color: $white;
+    color: $color_azure_approx !important;
+    border-color: $white;
+}
+
+body {
+    font-family: Tahoma, Arial, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+}
+
+.headerMargin {
+    margin-top: 10px;
+}
+
+.site-features {
+    border-radius: 0;
+    background-color: $white;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 9px;
+
+    > li + li:before {
+        content: "|";
+        color: $color_biscay_approx;
+        font-size: 11px;
+        padding: 0 3px;
+    }
+}
+
+.bhomes-contacts {
+    background-color: $white;
+    font-size: 12px;
+    float: right;
+    font-weight: bold;
+    padding-right: 21px;
+    border-radius: 0;
+
+    > li + li:before {
+        content: "|";
+        color: $color_red_violet_approx;
+        padding: 0 4px 0 0;
+    }
+}
+
+.navbar-brand_custom {
+    padding-top: 0;
+}
+
+.bhomes-footer-logo {
+    padding-top: 45px;
+}
+
+.footer-hr {
+    background-color: $color_mystic_approx;
+    height: 2px;
+    margin-bottom: 9px;
+}
+
+.footer-hr-section {
+    padding: 19px 19px 0 28px;
+}
+
+.footer-hr-section-tags {
+    padding: 0 14px 9px 24px;
+}
+
+.footer-tags {
+    font-size: 10px;
+    color: $color_silver_approx;
+    font-weight: bold;
+}
+
+.footer-links {
+    background-color: $white;
+    list-style: none outside none;
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 11px;
+    padding-left: 27px;
+
+    > li + li:before {
+        content: "";
+    }
+}
+
+.footer-links-headertext {
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    font-weight: bold;
+    background-color: $white;
+}
+
+.bhomes-footer-tags li {
+    color: $color_silver_approx;
+}
+
+.bhomes-footer-tags {
+    background-color: $white;
+    font-weight: bold;
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    font-size: 10px;
+    margin-bottom: 0;
+    padding-bottom: 11px;
+    padding-left: 4px;
+    padding-top: 0;
+
+    > li + li:before {
+        content: "|";
+        color: $color_silver_approx;
+        font-size: 10px;
+        padding-right: 3px;
+        padding-left: 0;
+    }
+}
+
+.footerAnchor {
+    color: $color_silver_approx;
+    font-size: 10px;
+}
+
+.reg {
+    padding-left: 83px;
+}
+
+.h25 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.text-separator {
+    color: $color_red_violet_approx;
+    font-size: 12px;
+}
+
+.bhomes-contactNo {
+    float: left;
+    letter-spacing: 2px;
+    padding-left: 21px;
+    padding-top: 2px;
+}
+
+.country-flag {
+    margin-bottom: 2px;
+    padding-left: 9px;
+}
+
+nav {
+    list-style: none outside none;
+}
+
+.header-line2 {
+    background-color: #223667;
+    height: 10px;
+    position: unset;
+    //  top: 42px;
+}
+
+.nav > li > a {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+    .nav > li > a:focus {
+        background-color: transparent;
+        outline: none;
+        text-decoration: none;
+    }
+
+.nav > li {
+    border: none;
+}
+
+.nav-justified > li {
+    border: none;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: none;
+        text-decoration: none;
+        background-color: inherit !important;
+    }
+}
+
+
+
+.headerlinehovering {
+    background-color: $color_red_violet_approx !important;
+    height: 10px !important;
+    margin-top: 10px !important;
+}
+
+.headerLinks {
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    background-color: $white;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 9px;
+}
+
+.header-com {
+    float: right;
+    margin-top: 21px;
+    padding-right: 22px;
+}
+
+
+//.headerTextHovering {
+//    color: $color_red_violet_approx !important;
+//}
+
+.dvcontainer {
+    background-image: url("../images/mainimage.jpg");
+    background-repeat: no-repeat;
+    height: 400px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+
+
+.btnSearch {
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    right: 0;
+    //If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 2px 3px 0 0 $black !important;
+    height: 50px;
+    padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+    width: 110px;
+    font-size: 14px;
+    padding-left: 13px;
+    font-weight: bold;
+    color: $white;
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UxNGM5ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iI2RmNGM5YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iI2UwNDg5YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2RhM2E5NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2Q2Mjc4YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iI2QzMWM4OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Q3MTY4MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYzJSIgc3RvcC1jb2xvcj0iI2QyMTE3YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iI2Q0MGU3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNDBlN2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.caret {
+    margin-right: 0;
+    margin-top: 0px;
+    color: $color_azure_approx;
+    float: right;
+}
+
+.dropdown-menu {
+    //background-color:#18437a;
+    width: 100%;
+    border: none;
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    //height: 100%;
+    //If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    padding-left: 41px;
+    font-weight: bold;
+    border: none;
+    padding-top: 9px;
+    background-image: none;
+    width: 100%;
+    border-color: $white;
+    text-align: left;
+    font-size: 14px;
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    padding-top: 3px;
+    background-color: $white;
+
+    &:hover {
+        background-color: $white;
+        border-color: none;
+    }
+
+    &:focus {
+        background-color: $white;
+        border-color: none;
+    }
+
+    &:active {
+        background-color: $white;
+        border-color: none;
+    }
+}
+
+
+
+.dropdownMenu1 {
+    width: inherit;
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    font-size: 14px;
+    background-color: $white;
+    color: $color_azure_approx;
+}
+
+.bhomes-content-space {
+    padding-bottom: 147px;
+}
+
+.right-alignment {
+    float: right;
+}
+
+.mainsearch-listing {
+    border: none;
+    background-color: transparent;
+
+    > li + li:before {
+        content: "";
+        font-size: 10px;
+        padding-right: 3px;
+        padding-left: 0;
+    }
+}
+
+.mainsearch-icons {
+    background: linear-gradient(to bottom, $color_ship_cove_approx 0, $color_horizon_approx 28%, $color_azure_approx 50%, $color_catalina_blue_approx 51%, $color_catalina_blue_approx 78%, $color_chambray_approx 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 1px 2px 7px -2px $color_woodsmoke_approx;
+    height: 46px;
+    margin: 0;
+    width: 46px;
+}
+
+.draw-search {
+    margin-left: 8px;
+    margin-top: 7px;
+}
+
+.agent {
+    margin-left: 12px;
+    margin-top: 7px;
+}
+
+.bhomes-btn-group {
+    display: inline;
+    position: relative;
+    vertical-align: middle;
+}
+
+.navbar_toggle_collaspe {
+    background-color: #8d8d8d !important;
+    padding: 8px 0px 5px 8px !important;
+    margin-top: 9px;
+    border: none;
+    margin-left: -31px !important;
+}
+
+.icon_bar_collaspe {
+    height: 4px !important;
+    margin-top: 4px !important;
+    width: 19px !important;
+    background-color: $white !important;
+}
+
+.navbar-toggle {
+    background-color: $white;
+    border-radius: 0px;
+    float: left;
+    padding: 0 0px;
+    margin-top: 9px;
+    border: none;
+    margin-left: 8px;
+
+    .icon-bar + .icon-bar {
+        margin-top: 6px;
+    }
+
+    .icon-bar {
+        height: 6px;
+        width: 30px;
+        background-color: gainsboro;
+    }
+}
+
+.agentAndDrawSearchIcons {
+    left: 0;
+    top: 1px;
+}
+
+.btn-default {
+    &:hover {
+        @extend %extend_1;
+    }
+
+    &:focus {
+        @extend %extend_1;
+    }
+
+    &:active {
+        @extend %extend_1;
+    }
+}
+
+.ddlserviceType {
+    width: 100%;
+    font-size: 14px;
+
+    li a {
+        line-height: 33px;
+    }
+}
+
+.bhomes-btn-group-ul {
+    width: 100%;
+    font-size: 14px;
+
+    li a {
+        line-height: 33px;
+    }
+}
+
+label {
+    color: $white;
+    margin-top: 10px;
+}
+
+.col-lg-pull-14 {
+    right: 0;
+}
+
+.col-lg-css-width {
+    width: 100%;
+}
+
+.search-ranges-controls {
+    right: 324px;
+}
+
+hr {
+    padding-top: 10px;
+}
+
+.search2 {
+    background: linear-gradient(to bottom, $color_ship_cove_approx 0, $color_horizon_approx 28%, $color_azure_approx 50%, $color_catalina_blue_approx 51%, $color_catalina_blue_approx 78%, $color_chambray_approx 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    //If you use compass, instead of the line below you could use +box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 1px 2px 7px -2px $color_woodsmoke_approx;
+    float: left;
+    height: 46px;
+    margin: 0;
+    width: 46px;
+}
+
+.AdSearchcontactNo {
+    text-align: right;
+    font-size: 12px;
+}
+
+.SearchText {
+    text-align: left;
+}
+
+.advance-text {
+    text-align: left;
+    text-decoration: underline;
+}
+
+.navbar-text {
+    margin-bottom: 6.5px;
+}
+
+.margin_top {
+    margin-top: 0px;
+}
+
+.col-xs-pull-14 {
+    right: 0;
+}
+
+.dvl {
+    padding-left: 4px;
+}
+
+.dvOR {
+    padding-left: 16px;
+    color: $color_steel_blue_approx;
+}
+
+.btnMobile {
+    height: 38px;
+    text-align: left;
+}
+
+.margin-top-forMobile {
+    margin-top: 20px;
+}
+
+.lblTo {
+    padding-left: 16px;
+}
+
+.dvBedrooms {
+    padding-left: 3px;
+}
+
+.margin-bottom {
+    padding-bottom: 2px;
+}
+
+footer {
+    background-color: $white;
+}
+
+
+
+
+
+.display_none {
+    display: none;
+}
+
+.margin_left {
+    margin-left: 79%;
+}
+
+
+.footer-left-white {
+    background-color: $white;
+    height: 5px;
+}
+
+.footer-left-pink {
+    background-color: $color_red_violet_approx;
+    height: 5px;
+}
+
+.headerMarginEmpty {
+    margin-top: 500px; //for mmohtisham bhai else its 100px;
+}
+
+.bhomes-footer {
+    line-height: 15px;
+}
+
+.footer-right-blue {
+    background-color: $color_blue;
+    height: 5px;
+}
+
+.country-currency-text {
+    color: inherit;
+
+    &:hover {
+        // color: $color_biscay_approx !important;
+    }
+}
+
+
+.nav-justified > li > a:focus {
+    background-color: transparent;
+}
+
+.headerLinks > li + li:before {
+    content: " ";
+    color: $color_biscay_approx;
+    font-size: 11px;
+    padding: 0 3px;
+}
+
+.open > .dropdown-toggle.btn-default {
+    @extend %extend_1;
+}
+
+.width_lines {
+    width: 32px !important;
+}
+
+.headerbreadcrumb > li + li + li:before {
+    color: $color_celeste_approx !important;
+    content: "|";
+    padding-top: 6px;
+    position: absolute;
+}
+
+.headerbreadcrumb > li + li:after {
+    color: $color_celeste_approx !important;
+}
+
+.headerbreadcrumb > li > a {
+    color: $color_biscay_approx;
+}
+
+li > a > div :hover {
+    content: " ";
+    color: $color_celeste_approx;
+}
+
+.btn-group > .btn {
+    padding-left: 3px;
+    height: inherit;
+
+    &:hover {
+        z-index: 0;
+    }
+
+    &:focus {
+        z-index: 0;
+    }
+
+    &:active {
+        z-index: 0;
+    }
+}
+
+
+.btn-group-vertical > .btn {
+    &:hover {
+        z-index: 0;
+    }
+
+    &:focus {
+        z-index: 0;
+    }
+
+    &:active {
+        z-index: 0;
+    }
+}
+
+
+
+.headerUnderline {
+    background-color: #233567;
+    height: 10px;
+    margin-top: 10px;
+
+    @media(max-width: $screen-md) {
+        background-color: #233567;
+
+        &:hover {
+            background-color: #d4007a;
+        }
+    }
+
+    @media(max-width: $screen-lg) {
+        background-color: #233567;
+
+        &:hover {
+            background-color: #d4007a;
+        }
+    }
+
+    @media(max-width: $screen-sm) {
+        background-color: #4e73a8 !important;
+        height: 1px !important;
+    }
+
+    @media(max-width: $screen-xs) {
+        background-color: #4e73a8 !important;
+        height: 1px !important;
+    }
+}
+
+//    p:nth-last-child(3) {
+//    background: #ff0000;
+//}
+
+.header_anchor {
+    @extend .h4;
+    color: #233567;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    @media(max-width: $screen-lg) {
+        &:hover {
+            color: #d4007a;
+        }
+
+        &:focus {
+            color: #d4007a;
+        }
+    }
+
+    @media(max-width: $screen-md) {
+        &:hover {
+            color: #d4007a;
+        }
+
+        &:focus {
+            color: #d4007a;
+        }
+    }
+
+    @media(max-width: $screen-xs) {
+        color: $white;
+        padding-top: 16px;
+        padding-left: 13px;
+        font-size: 12px;
+        text-align: left;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    @media(max-width: $screen-sm) {
+        color: $white;
+        padding-top: 16px;
+        padding-left: 13px;
+        font-size: 12px;
+        text-align: left;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+
+
+@mixin setXSandSMandMD($xsCol,$smCol,$mdCol) {
+    @include make-xs-column-offset($xsCol);
+    @include make-sm-column-offset($smCol);
+    @include make-md-column-offset($mdCol);
+}
+
+@mixin setXSandSMandMDandLGoffset($xsCol,$smCol,$mdCol,$lgCol) {
+    @include make-xs-column-offset($xsCol);
+    @include make-sm-column-offset($smCol);
+    @include make-md-column-offset($mdCol);
+    @include make-lg-column-offset($lgCol);
+}
+
+@mixin setSMandMDandLG($smCol,$mdCol,$lgCol) {
+    @include make-sm-column-offset($smCol);
+    @include make-md-column-offset($mdCol);
+    @include make-lg-column-offset($lgCol);
+}
+
+@mixin setXSandSMandMDandLG($xsCol,$smCol,$mdCol,$lgCol) {
+    @include make-xs-column($xsCol);
+    @include make-sm-column($smCol);
+    @include make-md-column($mdCol);
+    @include make-lg-column($lgCol);
+}
+
+@mixin setXSandLGandSM($xsCol,$lgCol,$smCol) {
+    @include make-xs-column($xsCol);
+    @include make-lg-column($lgCol);
+    @include make-sm-column($smCol);
+}
+
+@mixin setXSandMD($xsCol,$mdCol) {
+    @include make-xs-column($xsCol);
+    @include make-md-column($mdCol);
+}
+
+@mixin setXSandLG($xsCol,$lgCol) {
+    @include make-xs-column($xsCol);
+    @include make-lg-column($lgCol);
+}
+
+@mixin setXSandSM($xsCol,$smCol) {
+    @include make-xs-column($xsCol);
+    @include make-sm-column($smCol);
+}
+
+@mixin setMDandLG($mdCol,$lgCol) {
+    @include make-lg-column($lgCol);
+    @include make-md-column($mdCol);
+}
+
+@mixin setSMandMD($smCol,$mdCol) {
+    @include make-sm-column($smCol);
+    @include make-md-column($mdCol);
+}
+
+@mixin setXS($xsCol) {
+    @include make-xs-column($xsCol);
+}
+
+
+@mixin setparameterMediaQuery1() {
+    @media(min-width: $screen-lg) {
+        right: 200%;
+    }
+}
+
+@mixin menuetext() {
+    padding-left: 10px;
+    padding-top: 21px;
+}
+
+@mixin navbar-inverse-custom() {
+    background-color: $white;
+}
+
+@mixin set_subMenuSymbol() {
+    float: right;
+    padding-right: 13px;
+    background-color: transparent;
+    height: 0px;
+    margin-top: 0px;
+}
+
+@mixin hideInMDnLG() {
+    @extend .hidden-lg;
+    @extend .hidden-md;
+}
+
+@mixin hideInSMnMDnLG() {
+    @extend .hidden-lg;
+    @extend .hidden-md;
+    @extend .hidden-sm;
+}
+
+
+
+.header_list {
+
+
+    @media(max-width: $screen-xs) {
+        color: #1f5093;
+        background-color: #1f5093;
+
+        &:hover {
+            background-color: #1f5093;
+            color: #1f5093;
+        }
+
+        &:focus {
+            background-color: #1f5093;
+            color: #1f5093;
+        }
+
+        &:active {
+            background-color: #1f5093;
+            color: #1f5093;
+        }
+    }
+
+    @media(max-width: $screen-sm) {
+        background-color: #1f5093;
+        color: #1f5093;
+
+        &:hover {
+            background-color: #1f5093;
+            color: #1f5093;
+        }
+
+        &:focus {
+            background-color: #1f5093;
+            color: #1f5093;
+        }
+
+        &:active {
+            background-color: #1f5093;
+            color: #1f5093;
+        }
+    }
+
+    @media(max-width: $screen-lg) {
+        color: #cccccc;
+
+        &:hover {
+            background-color: #1f5093;
+            color: #cccccc;
+        }
+
+        &:focus {
+            background-color: #1f5093;
+            color: #cccccc;
+        }
+
+        &:active {
+            background-color: #1f5093;
+            color: #cccccc;
+        }
+    }
+
+    @media(max-width: $screen-md) {
+        &:hover {
+            background-color: #1f5093;
+            color: #cccccc;
+        }
+
+        &:focus {
+            background-color: #1f5093;
+            color: #cccccc;
+        }
+
+        &:active {
+            background-color: #1f5093;
+            color: #cccccc;
+        }
+
+        color: #cccccc;
+    }
+}
+
+.header_ul {
+    @media(max-width: $screen-xs) {
+        width: 72%;
+        z-index: 100;
+        position: absolute;
+        margin-top: -48px;
+    }
+
+    @media(max-width: $screen-sm) {
+        width: 72%;
+        z-index: 100;
+        position: absolute;
+        margin-top: -48px;
+    }
+
+    @extend .nav;
+    @extend .nav-justified;
+    @extend .headerbreadcrumb;
+}
+
+.btn_MenuIcon {
+    background-color: #d4007a !important;
+    margin-top: -1px;
+    min-height: 45px !important;
+    position: fixed !important;
+    right: 0px !important;
+    width: 40px !important;
+    transition: all 0.5s ease-in-out 0s;
+
+    .dvMenu_line + .dvMenu_line {
+        margin-top: 2px !important;
+    }
+
+    .dvMenu_line {
+        background-color: #fff !important;
+        height: 3px !important;
+        left: 12px !important;
+        padding-top: 3px !important;
+        position: relative !important;
+        top: 16px !important;
+        width: 15px !important;
+    }
+}
+
+
+//css start for the header show/hide by js fille//
+.nav-tow {
+    background: url("img/nav3.jpg") no-repeat top left;
+    height: 44px;
+    float: left;
+    width: 898px;
+    position: fixed;
+    top: -44px;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    // border-bottom: 7px #223668 solid;
+}
+
+.open {
+    float: right;
+    width: 40px;
+    height: 44px;
+    display: block;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+
+.full {
+    height: 80px !important;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.extra {
+    top: 87px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.fullsearch {
+    height: 308px;
+}
+
+.searchfull {
+    top: 51px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+/*.show {
+    top: 0;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}*/
+//css end for the header show/hide by js fille//
+.display_block {
+    display: block !important;
+}
+
+.dvrow_height {
+    height: 51px !important;
+}
+
+.headerTopLinks2 {
+    padding-right: 64px !important;
+    float: left !important;
+}
+
+.header_image {
+    background: url("../images/headertop.jpg") no-repeat scroll 0 0 transparent;
+    height: 50px;
+    position: absolute;
+    width: 200px;
+}
+
+#btns_MenuIcon {
+    display: none;
+}
+
+header.show {
+    .header-container {
+       height:44px;
+        .dvrow {
+            
+
+            #top {  
+                top: 50px;
+                -webkit-transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+                -o-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+
+                .headerTop {
+                    margin-top: 5px !important;
+                    width: 63.667% !important;
+
+                    .bhomesTopLeftLogo {
+                        .bhomesLogo {
+                            .header_image {
+                                width: 97px;
+                                height: 35px;
+                                background-image: url("/images/bh-btm.jpg");
+                                background-repeat: no-repeat;
+                            }
+                        }
+                    }
+
+                    #top_contactno {
+                        p {
+                            font-size: 18px !important;
+                            letter-spacing: 1px !important;
+                            padding-left: 82px !important;
+                            padding-top: 2px !important;
+                            word-spacing: 1px !important;
+                        }
+                    }
+                }
+
+                .headerNavBar {
+                    display: none;
+
+                    .menuButton {
+                        display: block;
+                    }
+                }
+
+                .headerTopLinks {
+                    padding-right: 64px;
+                    float: left;
+
+                    .linksRow {
+                        .signInSignUp {
+                            p {
+                                padding-right: 0px;
+                                margin-bottom: 0px;
+                                margin-top: 11px;
+                            }
+                        }
+
+                        .countryReference {
+                            p {
+                                margin-top: 11px;
+                                margin-bottom: 0px;
+                                padding-right: 0px;
+                            }
+                        }
+
+                        #btns_MenuIcon {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .navbarheader {
+                height: 0;
+               
+                position: relative;
+                top: -44px;
+                z-index: -1;
+
+                .navbar-collapse {
+                    ul {
+                        li {
+                            a {
+                                div {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.dv_xs_line {
+                background-color: #233567;
+                display: block !important;
+                height: 7px;
+                top: -2px;
+                transition: all 0.5s ease-in-out 0s;
+                z-index: 2000;
+                transform: translate3d(0px, 0px, 0px);
+            }
+        }
+    }
+}
+
+header {
+    .header-container {
+        .dvrow {
+            #top {
+                .headerTop {
+                    .bhomesTopLeftLogo {
+                        .bhomesLogo {
+                            .header_image {
+                                background: url("../images/headertop.jpg") no-repeat scroll 0 0 transparent;
+                                height: 50px;
+                                position: absolute;
+                                width: 200px;
+                            }
+                        }
+                    }
+
+                    #top_contactno {
+                    }
+                }
+
+                .headerNavBar {
+                    .menuButton {
+                    }
+                }
+
+                .headerTopLinks {
+                    .linksRow {
+                        .signInSignUp {
+                            p {
+                                @extend .navbar-text;
+                                @extend .header-com;
+                            }
+                        }
+
+                        .countryReference {
+                            p {
+                                @extend .navbar-text;
+                                @extend .header-com;
+                            }
+                        }
+
+                        #btns_MenuIcon {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .navbarheader {
+                .navbar-collapse {
+                    /*ul {
+                        li {
+                            a {
+                                div {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }*/
+                }
+            }
+
+            div.dv_xs_line {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+.country_ref {
+    margin-top: 11px !important;
+    margin-bottom: 0px !important;
+    padding-right: 0px !important;
+}
+
+.header_top {
+    margin-top: 5px !important;
+    width: 63.667% !important;
+}
+
+.signInSignUp2 {
+    padding-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-top: 11px !important;
+}
+
+.navbar_fixed_top_custom {
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    float: left;
+    width: 898px;
+    z-index: 9;
+    position: fixed;
+    margin: 0 auto;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+header {
+
+    div.header-container {
+        @extend .navbar-fixed-top;
+        @extend .container;
+        @include navbar-inverse-custom();
+
+
+        div.dvrow {
+            @extend .row;
+
+            div#top {
+                // @include setSMandMDandLG(12,12,12);
+                @extend .hidden-xs;
+                @extend .container;
+                background-color: $white;
+
+                div.headerTop {
+                    @include setXSandSMandMDandLG(12,8,8,8);
+                    @extend .row;
+                    @extend .headerMargin;
+
+                    div.bhomesTopLeftLogo {
+                        @include setXSandSMandMDandLG(12,12,4,4);
+
+                        a.bhomesLogo {
+                            @extend .navbar-brand;
+                            @extend .navbar-brand_custom;
+                        }
+                    }
+
+                    div#top_contactno {
+                        @include setMDandLG(8,8);
+                        @extend .col-lg-push-2;
+                        @extend .col-md-push-2;
+                        @extend .hidden-sm;
+                        @extend .hidden-xs;
+
+                        p {
+                            @extend .bhomes-contactNo;
+                            @extend .h25;
+                        }
+                    }
+                }
+
+                div.headerNavBar {
+                    @extend .navbar-header;
+                    @include setXS(3);
+
+                    div.menuButton {
+                        @extend .hidden-sm;
+                        @extend .hidden-md;
+                        @extend .hidden-lg;
+
+                        @extend .row;
+
+                        div.btns {
+
+                            @include setXSandSM(5,5);
+
+                            button.btn {
+                                @extend .navbar-toggle;
+
+                                span {
+                                    @extend .icon-bar;
+                                }
+                            }
+                        }
+
+                        div.menuMobileLine {
+                            @include setXS(5);
+                            @include menuetext();
+                        }
+                    }
+                }
+
+                div.headerTopLinks {
+                    @include setXSandSMandMDandLG(9,4,4,4);
+
+                    div.linksRow {
+                        @extend .row;
+
+                        div.signInSignUp {
+                            @include setXSandSMandMDandLG(8,7,9,9);
+
+                            p {
+                                @extend .navbar-text;
+                                @extend .header-com;
+
+                                @media(min-width: $screen-lg) {
+                                    padding-right: 21px;
+                                }
+
+                                a {
+                                    @extend .navbar-link;
+                                }
+
+                                span.textSeparartor {
+                                    @extend .text-separator;
+                                }
+
+                                a.SingInLink2 {
+                                    @extend .navbar-link;
+                                }
+                            }
+                        }
+
+                        div.countryReference {
+                            @include setXSandSMandMDandLG(4,5,3,3);
+
+                            p {
+                                @extend .navbar-text;
+                                @extend .header-com;
+
+                                @media(min-width: $screen-lg) {
+                                    padding-right: 21px;
+                                }
+
+                                a {
+                                    @extend .navbar-link;
+                                    @extend .h2;
+                                    @extend .country-currency-text;
+
+                                    img {
+                                        @extend .country-flag
+                                    }
+                                }
+                            }
+                        }
+
+                        div#btns_MenuIcon {
+                            @extend .btn_MenuIcon;
+
+                            div.dvMenu_lines {
+                                @extend .dvMenu_line;
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.navbarheader {
+                @include setXSandSMandMDandLG(12,12,12,12);
+
+
+
+                nav.navbar-collapse {
+                    @extend .collapse;
+
+                    ul {
+                        @extend .header_ul;
+
+                        li.navbar_ul_li_xs {
+                            @extend .header_list;
+                            @include hideInSMnMDnLG();
+
+                            a {
+                                @extend .header_anchor;
+
+                                div.header-line {
+                                    @extend .headerUnderline;
+                                }
+                            }
+                        }
+
+                        li.navbar_ul_li_lg {
+                            @extend .header_list;
+
+                            a {
+                                @extend .header_anchor;
+
+                                div.header-line {
+                                    @extend .headerUnderline;
+                                }
+
+                                div {
+                                }
+
+                                span {
+                                    @include hideInSMnMDnLG();
+                                    @include set_subMenuSymbol();
+                                }
+                            }
+
+                            ul.dropdown-menu {
+                                @include hideInSMnMDnLG();
+
+                                li {
+                                    @extend .header_list;
+
+                                    a {
+                                        @extend .header_anchor;
+
+                                        span {
+                                            @include set_subMenuSymbol();
+                                        }
+
+                                        div.header-line {
+                                            @extend .headerUnderline;
+                                        }
+                                    }
+
+                                    ul.dropdown-menu {
+                                        @include hideInSMnMDnLG();
+
+                                        li {
+                                            @extend .header_list;
+
+                                            a {
+                                                @extend .header_anchor;
+
+                                                span {
+                                                    @include set_subMenuSymbol();
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.dv_xs_line {
+                @include setXSandSM(12,12);
+                @extend .header-line2;
+            }
+        }
+    }
+}
+////////////////// SEARCH CONTROL/////////////////////////
+.search_control_container {
+    @extend .row;
+    padding-bottom: 14px;
+    background: linear-gradient(to bottom, $color_matisse_approx 0, $color_azure_approx 0, $color_catalina_blue_approx 50%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: auto;
+    margin-top: 279px;
+    padding-left: 25px;
+    padding-right: 26px;
+    color: $white;
+    margin-top: 354px;
+
+    @media(min-width: $screen-lg) {
+        height: 176px;
+        padding-top: 25px;
+    }
+
+    @media(min-width: $screen-md) {
+        height: 176px;
+        padding-top: 25px;
+    }
+
+    @media(min-width: $screen-sm) {
+        height: 176px;
+        padding-top: 25px;
+    }
+}
+
+.bhomes_btn_group_height {
+    height: 54px;
+    box-shadow: 2px 3px 4px 0 rgb(0, 0, 0);
+    @extend .btn-group;
+    @extend .bhomes-btn-group;
+    @include setXSandSMandMDandLG(12,12,12,12);
+
+    @media(min-width: $screen-lg) {
+        height: 50px;
+        margin-left: 0px;
+    }
+
+    @media(min-width: $screen-md) {
+        height: 50px;
+        margin-left: 0px;
+    }
+
+    @media(min-width: $screen-sm) {
+        height: 50px;
+        margin-left: 0px;
+    }
+
+    & > div {
+        margin-left: 0px;
+    }
+}
+
+.ddlbutton {
+    box-shadow: none;
+    border: none;
+    padding: 7px 12px 6px 12px;
+    font-family: Arial;
+    color: #3f6095;
+    font-size: 14px;
+    font-weight: bold;
+    height: 54px;
+    border-radius: 0px;
+
+    @media(min-width: $screen-lg) {
+        height: 50px;
+    }
+
+    @media(min-width: $screen-md) {
+        height: 50px;
+    }
+
+    @media(min-width: $screen-sm) {
+        height: 50px;
+    }
+
+    &:hover {
+        color: #3f6095;
+        background-color: $white;
+    }
+
+    &:focus {
+        color: #3f6095;
+        background-color: $white;
+    }
+
+    &:active {
+        color: #3f6095;
+        background-color: $white;
+    }
+}
+
+.main-search-enterLocation {
+    text-align: left;
+    height: inherit;
+    font-size: 16px;
+    padding: 10px 7px 6px 5px !important;
+    color: #8B9FBE;
+    border-radius: 0px;
+
+    &:hover {
+        color: #8B9FBE;
+    }
+}
+
+.btnBhome {
+    &:hover,
+    &:focus,
+    &.focus {
+        color: #8B9FBE;
+    }
+
+    &:active,
+    &.active {
+        @include box-shadow(none);
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        @include box-shadow(none);
+    }
+}
+
+.search_ranges_control {
+    @extend .row;
+    @extend .margin_top;
+
+    @media(min-width: $screen-lg) {
+        width: 339%;
+        margin-top: 30px;
+    }
+}
+
+.btn_category {
+    @extend .btn;
+    @extend .dropdown-toggle;
+    @extend .main-search-enterLocation;
+    @extend .dropdownMenu1;
+    @extend .btnMobile;
+}
+
+section.search-control {
+    @extend .container;
+
+    div.searchContainer {
+        @extend .search_control_container;
+    }
+}
+
+//section.search-control {
+//    @extend .container;
+//
+//    div.searchContainer {
+//        @extend .search_control_container;
+//
+//        div.search-textbox {
+//            @include setXSandSMandMDandLG(12,7,7,7);
+//            @extend .row;
+//
+//            div.enterLocation {
+//
+//                @extend .bhomes_btn_group_height;
+//
+//
+//                input {
+//                    @include setXSandSMandMDandLG(8,8,8,8);
+//                    @extend .btnBhome;
+//                    @extend .main-search-enterLocation;
+//
+//                    @media(min-width: $screen-lg) {
+//                    }
+//                }
+//
+//                div {
+//                    @include setXSandSMandMDandLG(4,2,2,2);
+//                    // @extend .col-lg-push-1;
+//                    button.ddl {
+//                        @extend .ddlbutton;
+//                        @extend .btn;
+//                        @extend .dropdown-toggle;
+//
+//                        span {
+//                            @extend .caret;
+//                        }
+//                    }
+//
+//                    ul.dropdown-menu {
+//                        @extend .ddlserviceType;
+//                    }
+//                }
+//            }
+//        }
+//
+//        div {
+//            @include setSMandMDandLG(1,1,1);
+//            @extend .hidden-xs;
+//        }
+//
+//            div.search_ranges_button_container {
+//                @include setXSandSMandMDandLG(12,4,4,4);
+//
+//                div.search_ranges_button {
+//                    @include make-row();
+//
+//                    div.search-ranges {
+//                        @include setXSandSMandMDandLG(12,8,8,8);
+//
+//                        @media(min-width: $screen-desktop) {
+//                            right: 200%;
+//                        }
+//
+//                        div.newline {
+//                            @extend .hidden-xs;
+//                        }
+//
+//                        div.search-ranges-controls {
+//                            @extend .search_ranges_control;
+//
+//                            div.search-ranges-category {
+//                                @include setXSandSMandMDandLG(6,4,4,4);
+//
+//                                div.dv_space {
+//                                    @extend .row;
+//
+//                                    div.dv_space_div1 {
+//                                        @include setXSandSMandMDandLG(12,12,12,12);
+//                                    }
+//
+//                                    div.dv_space_div2 {
+//                                        @include setXSandSMandMDandLG(12,12,12,12);
+//
+//                                        div.dv_space_div2_div1 {
+//                                            @include setXSandSMandMDandLG(11,11,11,11);
+//
+//                                            div.dv_space_div2_div1_div {
+//                                                @extend .btn-group;
+//                                                @extend .dropdown;
+//
+//                                                button {
+//                                                    @extend .btn_category;
+//
+//                                                    span {
+//                                                        @extend .caret;
+//                                                    }
+//                                                }
+//
+//                                                ul.dropdown-menu {
+//
+//                                                    @extend .bhomes-btn-group-ul;
+//                                                }
+//                                            }
+//                                        }
+//
+//                                        div.dv_space_div2_div2 {
+//                                            @include setXSandSMandMDandLG(1,1,1,1);
+//                                        }
+//                                    }
+//                                }
+//                            }
+//
+//                            div.search-ranges-bedroom {
+//                                @include setXSandSMandMDandLG(6,4,4,4);
+//                                @include make-lg-column-push(4);
+//
+//                                div.search_ranges_bedroom_div {
+//                                    @extend .row;
+//
+//                                    div.search_ranges_bedroom_div_div1 {
+//                                        @include setXSandSMandMDandLG(12,12,12,12);
+//
+//                                        div.search_ranges_bedroom_div_div1_div1 {
+//                                            @include setXSandSMandMDandLG(1,1,1,1);
+//                                        }
+//
+//                                        div.search_ranges_bedroom_div_div1_div2 {
+//                                            @include setXSandSMandMDandLG(11,11,11,11);
+//                                        }
+//                                    }
+//
+//                                    div.search_ranges_bedroom_div_div2 {
+//                                        @include setXSandSMandMDandLG(12,12,12,12);
+//
+//                                        div {
+//                                            @include setXSandSMandMDandLG(1,1,1,1);
+//                                        }
+//
+//                                            div.search_ranges_bedroom_div_div2_div2 {
+//                                                @include setXSandSMandMDandLG(11,11,11,11);
+//
+//                                                div.search_ranges_bedroom_div_div2_div2_div {
+//                                                    @extend .btn-group;
+//                                                    @extend .dropdown;
+//
+//                                                    button.btnBedrooms {
+//                                                        @extend .btn;
+//                                                        @extend .dropdown-toggle;
+//                                                        @extend .main-search-enterLocation;
+//                                                        @extend .dropdownMenu1;
+//                                                        @extend .btnMobile;
+//
+//                                                        span.btnBedrooms_span {
+//                                                            @extend .caret;
+//                                                        }
+//                                                    }
+//
+//                                                    ul.dropdown-menu {
+//                                                        @extend .bhomes-btn-group-ul;
+//                                                    }
+//                                                }
+//                                            }
+//                                    }
+//                                }
+//                            }
+//
+//                            div.search-ranges-price {
+//                                @include setXSandSMandMDandLG(12,4,4,4);
+//                                @include make-lg-column-pull(4);
+//
+//                                div.search_ranges_price_div {
+//                                    @extend .row;
+//
+//                                    div.search_ranges_price_div_div1 {
+//                                        @include setXSandSMandMDandLG(12,12,12,12);
+//                                    }
+//
+//                                    div.search_ranges_price_div_div2 {
+//                                        @include setXSandSMandMDandLG(12,12,12,12);
+//
+//                                        div.search_ranges_price_div_div2_div1 {
+//                                            @include setXSandSMandMDandLG(5,5,5,5);
+//
+//                                            div.search_ranges_price_div_div2_div1_div {
+//                                                @extend .btn-group;
+//                                                @extend .dropdown;
+//
+//                                                button.btnMinPrice {
+//                                                    @extend .btn;
+//                                                    @extend .dropdown-toggle;
+//                                                    @extend .main-search-enterLocation;
+//                                                    @extend .dropdownMenu1;
+//                                                    @extend .btnMobile;
+//
+//                                                    span.btnMinPrice_span {
+//                                                        @extend .caret;
+//                                                    }
+//                                                }
+//
+//                                                ul.dropdown-menu {
+//                                                    @extend .bhomes-btn-group-ul;
+//                                                }
+//                                            }
+//                                        }
+//
+//                                        div.search_ranges_price_div_div2_div2 {
+//                                            @include setXSandSMandMDandLG(2,2,2,2);
+//
+//                                            label {
+//                                                @extend .lblTo;
+//                                            }
+//                                        }
+//
+//                                        div.search_ranges_price_div_div2_div3 {
+//                                            @include setXSandSMandMDandLG(5,5,5,5);
+//
+//                                            div.search_ranges_price_div_div2_div3_div {
+//                                                @extend .btn-group;
+//                                                @extend .dropdown;
+//
+//                                                button.btnMaxPrice {
+//                                                    @extend .btn;
+//                                                    @extend .dropdown-toggle;
+//                                                    @extend .main-search-enterLocation;
+//                                                    @extend .dropdownMenu1;
+//                                                    @extend .btnMobile;
+//
+//                                                    span.btnMaxPrice_span {
+//                                                        @extend .caret;
+//                                                    }
+//                                                }
+//
+//                                                ul.dropdown-menu {
+//                                                    @extend .bhomes-btn-group-ul;
+//                                                }
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                    div.search-button {
+//                        @include setXSandSMandMDandLG(12,4,4,4);
+//
+//                        div.search_button_div {
+//                            @extend .row;
+//                            @extend .margin-top-forMobile;
+//                            @extend .col-lg-css-width;
+//
+//                            div.search_button_div_div1 {
+//                                @include setXS(5);
+//
+//                                button.btnSearch {
+//                                    @extend .btn-group;
+//                                    @extend .btn;
+//                                    @extend .btnSearch;
+//                                }
+//                            }
+//
+//                            div.search_button_div_div2 {
+//                                @include setXS(2);
+//                            }
+//
+//                            div.search_button_div_div3 {
+//                                @include setXS(5);
+//                                @extend .agentAndDrawSearchIcons;
+//
+//                                div.dvagent_icon {
+//                                    @include setXS(5);
+//                                    @extend .search2;
+//                                }
+//
+//                                div.dvIcon_space {
+//                                    @include setXS(2);
+//                                }
+//
+//                                div.dvdrawSearch_icon {
+//                                    @include setXS(5);
+//                                    @extend .search2;
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                    div.Searh_Text {
+//                        @extend .col-lg-css-width;
+//
+//                        div.Search_Text_div1 {
+//                            @include setXS(5);
+//                        }
+//
+//                        div.Search_Text_div2 {
+//                            @include setXS(2);
+//                        }
+//
+//                        div.Search_Text_div3 {
+//                            @include setXS(5);
+//
+//                            div.Search_Text_div3_div1 {
+//                                @include setXS(5);
+//                            }
+//
+//                            div.Search_Text_div3_div2 {
+//                                @include setXS(2);
+//                            }
+//
+//                            div.Search_Text_div3_div3 {
+//                                @include setXS(5);
+//                                @extend .SearchText;
+//                            }
+//                        }
+//                    }
+//
+//                    div.advance_search {
+//                        @include setXSandSMandMDandLG(12,12,12,12);
+//                        @extend .col-lg-css-width;
+//                        @extend .margin-bottom;
+//
+//                        div.advance_search_div1 {
+//                            @include setXSandSMandMDandLG(5,5,5,5);
+//                            @extend .advance-text;
+//
+//                            span.advance_search_span {
+//                                @extend .caret;
+//                            }
+//                        }
+//
+//                        div.advance_search_div2 {
+//                            @include setXSandSMandMDandLG(1,2,2,2);
+//                        }
+//
+//                        div.advance_search_div3 {
+//                            @include setXSandSMandMDandLG(6,5,5,5);
+//                            @extend .AdSearchcontactNo;
+//                        }
+//                    }
+//                }
+//            }
+//    }
+//}
+//
+//
+
+footer {
+    @extend .bhomes-footer;
+    @extend .headerMarginEmpty;
+
+    div.footer_container {
+        @extend .container;
+
+        div {
+            @extend .row;
+
+            div.line1 {
+                @extend .row;
+                @include setXSandSMandMDandLG(1,1,1,1);
+
+                div.line2 {
+                    @extend .row;
+                    @include setXSandSMandMDandLG(4,4,4,4);
+
+                    div.line3 {
+                        @extend .row;
+                        @extend .footer-left-pink;
+                        @include setXSandSMandMDandLG(10,10,10,10);
+
+                        div.line4 {
+                            @extend .row;
+                            @include setXSandSMandMDandLG(8,8,8,8);
+
+                            div.line5 {
+                                @extend .row;
+                                @include setXSandSMandMDandLG(12,12,12,12);
+                                @extend .footer-left-pink;
+                            }
+                        }
+
+                        div.line6 {
+                            @include setXSandSMandMDandLG(4,4,4,4);
+                            @extend .footer-right-blue;
+                        }
+                    }
+
+                    div.line7 {
+                        @include setXSandSMandMDandLG(2,2,2,2);
+
+                        div.line10 {
+                            @include setXSandSMandMDandLG(6,6,6,6);
+                            @extend .footer-left-pink;
+                        }
+
+                        div.line11 {
+                            @include setXSandSMandMDandLG(6,6,6,6);
+                            @extend .footer-left-white;
+                        }
+                    }
+                }
+
+                div.lin8 {
+                    @include setXSandSMandMDandLG(8,8,8,8);
+
+                    div.line12 {
+                        @include setXSandSMandMDandLG(1,1,1,1);
+
+                        div.line14 {
+                            @include setXSandSMandMDandLG(1,1,1,1);
+                        }
+
+                        div.line15 {
+                            @include setXSandSMandMDandLG(11,11,11,11);
+
+                            div.line16 {
+                                @include setXSandSMandMDandLG(11,11,11,11);
+
+                                div.line18 {
+                                    @include setXSandSMandMDandLG(5,5,5,5);
+                                }
+
+                                div.line19 {
+                                    @include setXSandSMandMDandLG(7,7,7,7);
+                                    @extend .footer-right-blue;
+                                }
+                            }
+
+                            div.line17 {
+                                @include setXSandSMandMDandLG(1,1,1,1);
+                                @extend .footer-right-blue;
+                            }
+                        }
+                    }
+
+                    div.line13 {
+                        @include setXSandSMandMDandLG(11,11,11,11);
+                        @extend .footer-right-blue;
+                    }
+                }
+            }
+
+            div.line9 {
+                @include setXSandSMandMDandLG(11,11,11,11);
+                @extend .footer-right-blue;
+            }
+        }
+
+        div {
+            @extend .row;
+            @include setXSandSMandMDandLG(12,12,12,12);
+
+            ol {
+                @extend .breadcrumb;
+                @extend .footer-links;
+
+                li.ListFirst1 {
+                    @extend .footer-links-headertext;
+                }
+
+                li.ListFirst2 {
+                    ol {
+                        @extend .breadcrumb;
+                        @extend .site-features;
+                    }
+                }
+            }
+        }
+
+        div {
+            @extend .row;
+            @include setXSandSMandMDandLG(12,12,12,12);
+
+            ol {
+                @extend .footer-links;
+                @extend .breadcrumb;
+
+                li.ListFirst3 {
+                    @extend .footer-links-headertext;
+                }
+
+                li.ListFirst4 {
+                    ol {
+                        @extend .breadcrumb;
+                        @extend .site-features;
+                    }
+                }
+            }
+        }
+
+        div {
+            @extend .row;
+            @include setXSandSMandMDandLG(12,12,12,12);
+
+            ol {
+                @extend .footer-links;
+                @extend .breadcrumb;
+
+                li.ListFirst5 {
+                    @extend .footer-links-headertext;
+                }
+
+                li.ListFirst6 {
+                    ol {
+                        @extend .breadcrumb;
+                        @extend .site-features;
+                    }
+                }
+            }
+        }
+
+            div.bhomes-footer-logo {
+                div#row {
+                    @extend .row;
+
+                    div#footer-brand {
+                        @include setXSandSMandMDandLG(2,2,2,2);
+
+                        a {
+                            @extend .navbar-brand;
+                            @extend .navbar-brand_custom;
+                        }
+                    }
+
+                    div#footer-contact {
+                        @include setXSandSMandMDandLG(5,5,5,5);
+                        @include setXSandSMandMDandLGoffset(5,5,5,5);
+
+                        ol#footerContacts {
+                            @extend .breadcrumb;
+                            @extend .bhomes-contacts;
+                        }
+                    }
+                }
+            }
+
+            div#footerHr {
+                @extend .row;
+                @extend .footer-hr-section;
+
+                div#hr_Line {
+                    @extend .footer-hr;
+                    @include setXSandSMandMDandLG(12,12,12,12);
+                }
+            }
+
+            div#hr_footer_tags_div {
+                @extend .row;
+                @extend .footer-hr-section-tags;
+                @extend .footer-tags;
+
+                div#hr_footer_tags_div_div1 {
+                    @include setXSandSMandMDandLG(4,4,4,4);
+
+                    ol#hr_footer_tags_div_div1_ol {
+                        @extend .breadcrumb;
+                        @extend .bhomes-footer-tags;
+                    }
+                }
+
+                div#hr_footer_tags_div_div3 {
+                    @include setXSandSMandMDandLG(3,3,3,3);
+                }
+
+                div#hr_footer_tags_div_div2 {
+                    @include setXSandSMandMDandLG(5,5,5,5);
+
+                    @extend .right-alignment;
+
+                    div#hr_footer_tags_div_div2_div1 {
+                        @include make-lg-column(3);
+                    }
+
+                    div#hr_footer_tags_div_div2_div2 {
+                        @include make-lg-column(9);
+                        //@include make-lg-column-offset(3);
+                    }
+                }
+            }
+    }
+}
+
+section.homepage_background_image {
+    @extend .container;
+
+    div {
+        @extend .dvcontainer;
+    }
+}
+
+
+section.mainbody {
+    @extend .container;
+
+    section.maincontent {
+        @extend .container;
+    }
+}
