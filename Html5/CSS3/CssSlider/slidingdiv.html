@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slide Up/Down Responsive Navigation</title>
+<style type="text/css">.container {
+    border:1px solid lime;
+    overflow:hidden;
+    position:fixed;
+    /* the container's height will determine the height of its slider  */
+    /*height:350px; */
+}
+
+
+.slider {
+	
+	/* complete liquid height based on the parent's height!! */
+    height:100%;
+
+    /* only transition on transform properties which are hardware accelerated = way better performances */
+	-webkit-transition:-webkit-transform .3s ease;
+       -moz-transition:   -moz-transform .3s ease;
+        -ms-transition:    -ms-transform .3s ease;
+            transition:        transform .3s ease;
+}
+
+.slider { 
+    /* visible */
+    -webkit-transform: translate(0, 0%);
+       -moz-transform: translate(0, 0%);
+        -ms-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+}
+.container:hover .slider { 
+    /* completely offscreen */
+    -webkit-transform: translate(0, -100%);
+       -moz-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+}
+
+
+
+/* -------- not interesting styles ----------- */
+body {
+    background:#eee;
+  //  margin:50px;
+}
+.slider {
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+        -ms-box-sizing:border-box;
+            box-sizing:border-box;
+
+    padding:20px;
+    background: pink;
+    border:1px solid hotpink;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <div class="slider opened">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+</body>
+</html>
