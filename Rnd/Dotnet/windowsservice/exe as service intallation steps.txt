@@ -1,0 +1,3 @@
+Steps to install exe as service
+sc create BhomesLocaldev_Unitupdateservice binpath= C:\services\unitservice\BhomesServiceSetupNov13\BhomesUnitService.exe type= own start= auto
+sc create BhomesLocaldev_Agentservice binpath= C:\services\agentservice\BhomesAgentService.exe type= own start= auto

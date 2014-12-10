@@ -1,0 +1,4 @@
+
+D:\Bhomes_V2\Bhomes_V2\WebProject\BhomesV2\Web\thumbs\property>dir /s /ad |find "gallery"
+
+http://www.computerhope.com/dirhlp.htm
