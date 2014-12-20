@@ -5,17 +5,28 @@ jQuery(document).ready(function() {
       offset: {
         top: jQuery('header').height()
       }
-   });	
+ });	
    jQuery(window).scroll(function(){
      checkScroll();		
    });
+   jQuery('header').click(function(){
+   jQuery('aside').toggleClass('open');
+   	setTimeout(function(){jQuery('aside').toggleClass('open');},300);	
+   brandDiv.toggleClass('slideslowUp');					
+                     	setTimeout(function(){ var brandDiv = jQuery('header.affix  #topbar');brandDiv.toggleClass('slideslowUp');},300);	
+   });
+
+   jQuery('aside').click(function(){
    
-  
+  jQuery('#topbar').toggleClass('slideslowUp');
+ //  jQuery('article').toggleClass('slideslowUp');
+ //                    	setTimeout(function(){  jQuery('article').toggleClass('slideslowUp');},3000);	
+   });   
 
 });
 function checkScroll(){
 var currentPosition = jQuery(window).scrollTop();		
-		var topPosition = jQuery('header').height()+50;
+		var topPosition = jQuery('header').height();
 		if(arguments && arguments.length > 0 )
 		{
 		  if(arguments[0]==1 && currentPosition < topPosition)
@@ -49,8 +60,8 @@ if(!navDiv.hasClass('slideUp')){
                      	{ brandDiv.removeClass('slideslowUp');}                 	
                      	
                      	navDiv.addClass('slideUp');	
-			brandDiv.addClass('slideslowUp');					
-                     	setTimeout(function(){ var brandDiv = jQuery('header.affix  #topbar');brandDiv.removeClass('slideslowUp');},300);	
+			 jQuery('#topbar').toggleClass('slideslowUp');			
+                     	setTimeout(function(){jQuery('#topbar').toggleClass('slideslowUp');},300);	
                      }	
 
 }

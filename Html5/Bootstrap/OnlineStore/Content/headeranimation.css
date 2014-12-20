@@ -4,8 +4,16 @@
 	color: #FFF;
 	font-size: 12px;
 	padding: 10px 0 0;
-	border-bottom: 3px solid #FA9221;  
-	   
+	border-bottom: 3px solid #FA9221; 
+	width:100%;
+position:absolute;
+z-index: 3;
+top:0%;
+transition: top .3s;
+-moz-transition: top .3s;
+-webkit-transition: top .3s;
+-o-transition: top .3s;
+
 }
 #topbar ul {
 	margin: 5px 0 0;
@@ -57,25 +65,11 @@ header.affix  {
   left: 0;
  z-index: 3;
 }
-
-header.affix  #topbar { 
-
-	top:0px;
-       position:relative;
-       z-index: 3;
-        -webkit-transition:-webkit-transform .5s ease;
-       -moz-transition:   -moz-transform .5s ease;
-        -ms-transition:    -ms-transform .5s ease;
-            transition:        transform .5s ease;
-    -webkit-transform: translate(0, 0%);
-       -moz-transform: translate(0, 0%);
-        -ms-transform: translate(0, 0%);
-            transform: translate(0, 0%);
-	    
+header  nav {
+ position:relative;
 }
 
 header.affix  nav {
- position:relative;
  z-index: -1;
 -webkit-transition:-webkit-transform .5s ease;
        -moz-transition:   -moz-transform .5s ease;
@@ -96,15 +90,8 @@ header.affix  nav {
 }
 
 .slideslowUp{ 
-    /* completely offscreen */
-    -webkit-transition:-webkit-transform .5s ease;
-       -moz-transition:   -moz-transform .5s ease;
-        -ms-transition:    -ms-transform .5s ease;
-            transition:        transform .5s ease;
-    -webkit-transform: translate(0, -100%);
-       -moz-transform: translate(0, -100%);
-        -ms-transform: translate(0, -100%);
-            transform: translate(0, -100%);	  
+     top:-100% !important;
+	  
 }
 	  
 /* Header Animation End*/
@@ -201,4 +188,28 @@ header.affix  nav {
 }
 #footer .footer-social a.ico-google:hover span {
 	background-position: -80px -28px;
+}
+
+article{
+background-color:yellow;
+top:0%;
+transition: top .3s;
+-moz-transition: top .3s;
+-webkit-transition: top .3s;
+-o-transition: top .3s;
+}
+aside{
+top:0;
+left:0%;
+right:0%;
+
+transition: right .3s, left .3s;
+-moz-transition: right .3s, left .3s;
+-webkit-transition: right .3s, left .3s;
+-o-transition: right .3s, left .3s;
+}
+
+aside.open{
+ left:100%;
+right:100%;
 }
