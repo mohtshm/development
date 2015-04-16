@@ -1,0 +1,6 @@
+G:\Development\assessments\unified-Logic\FrogsLilyPadOccupency\FrogsLilyPadOccupency\bin\Debug\FrogsLilyPadOccupency.exe.config
+G:\Development\assessments\unified-Logic\FrogsLilyPadOccupency\FrogsLilyPadOccupency\bin\Debug\FrogsLilyPadOccupency.exe
+G:\Development\assessments\unified-Logic\FrogsLilyPadOccupency\FrogsLilyPadOccupency\bin\Debug\FrogsLilyPadOccupency.pdb
+G:\Development\assessments\unified-Logic\FrogsLilyPadOccupency\FrogsLilyPadOccupency\obj\Debug\FrogsLilyPadOccupency.csprojResolveAssemblyReference.cache
+G:\Development\assessments\unified-Logic\FrogsLilyPadOccupency\FrogsLilyPadOccupency\obj\Debug\FrogsLilyPadOccupency.exe
+G:\Development\assessments\unified-Logic\FrogsLilyPadOccupency\FrogsLilyPadOccupency\obj\Debug\FrogsLilyPadOccupency.pdb
