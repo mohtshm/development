@@ -1,0 +1,13 @@
+Admin users
+compaign
+complainmanagements_empty
+Order_Tracking
+dss_specification
+tbl_picklist => created by > userName
+tbl_picklist_orders
+groups
+usergroups
+lpo
+lpo_comments
+lpo_items
+dss_customers_basket
