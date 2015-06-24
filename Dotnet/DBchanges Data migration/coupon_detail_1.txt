@@ -1,0 +1,58 @@
+DROP TABLE [dbo].[Coupons_Details]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Coupons_Details](
+	[CouponID] [bigint] NOT NULL,
+	[CouponNo] [varchar](200) NOT NULL,
+	[DateUsed] [date] NOT NULL,
+	[Status] [bit] NOT NULL,
+	[TimeStamp] [time](7) NOT NULL,
+	[UsedStatus] [bit] NOT NULL,
+	[DateSend] [date] NOT NULL,
+	[CustomerID] [nvarchar](128) NOT NULL
+	)
+GO
+
+
+
+
+
+
+
+
+
+CREATE TABLE [dbo].[Tmp_Coupons_Details](
+	[CouponID] [bigint] IDENTITY(1,1) NOT NULL,
+	[CouponNo] [varchar](200) NOT NULL,
+	[DateUsed] [date] NOT NULL,
+	[Status] [bit] NOT NULL,
+	[TimeStamp] [time](7) NOT NULL,
+	[UsedStatus] [bit] NOT NULL,
+	[DateSend] [date] NOT NULL,
+	[CustomerID] [nvarchar](128) NOT NULL,
+ CONSTRAINT [PK_Coupons_Details_CouponNo] PRIMARY KEY CLUSTERED 
+(
+	[CouponNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Tmp_Coupons_Details] ON 
+GO
+IF EXISTS(SELECT * FROM [dbo].[Coupons_Details])
+INSERT INTO [dbo].[Tmp_Coupons_Details] (
+       Id, CustomerId, VendorID, ProductId, IsApproved, Title, ReviewText, Rating, HelpfulYesTotal, HelpfulNoTotal, CreatedOnUtc
+)           
+SELECT Id, CustomerId, VendorID, ProductId, IsApproved, Title, ReviewText, Rating, HelpfulYesTotal, HelpfulNoTotal, CreatedOnUtc
+  FROM [dbo].[Coupons_Details]	TABLOCKX 
+GO
+SET IDENTITY_INSERT [dbo].[Tmp_Coupons_Details] OFF
+GO
+DROP TABLE [dbo].[Coupons_Details]
+GO
+Exec sp_rename '[Tmp_Coupons_Details]', '[Coupons_Details]'
+GO

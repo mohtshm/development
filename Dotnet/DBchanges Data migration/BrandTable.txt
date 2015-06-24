@@ -1,0 +1,150 @@
+USE [cdmigrate3]
+GO
+
+ALTER TABLE [dbo].[Brand] DROP CONSTRAINT [DF_Brand_LastModified]
+GO
+
+ALTER TABLE [dbo].[Brand] DROP CONSTRAINT [DF_Brand_CreatedOn]
+GO
+
+ALTER TABLE [dbo].[Brand] DROP CONSTRAINT [DF_Brand_IsActive]
+GO
+
+/****** Object:  Table [dbo].[Brand]    Script Date: 6/3/2015 6:44:46 PM ******/
+DROP TABLE [dbo].[Brand]
+GO
+
+/****** Object:  Table [dbo].[Brand]    Script Date: 6/3/2015 6:44:46 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Brand](
+	[Id] [bigint]  NULL,
+	[BrandName] [varchar](128) NOT NULL,
+	[Description] [varchar](1024) NULL,
+	[IsActive] [bit] NOT NULL,
+	[MetaUrl] [varchar](50) NULL,
+	[MetaTitle] [varchar](50) NULL,
+	[MetaKeywords] [varchar](50) NULL,
+	[MetaDescription] [varchar](1024) NULL,
+	[DisplayOrder] [int] NULL,
+	[CreatedOn] [datetime] NULL,
+	[ImageUrl] [varchar](200) NULL,
+	[Language] [varchar](5) NULL,
+	[LastModified] [datetime] NULL,
+)
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Brand] ADD  CONSTRAINT [DF_Brand_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+ALTER TABLE [dbo].[Brand] ADD  CONSTRAINT [DF_Brand_CreatedOn]  DEFAULT (getdate()) FOR [CreatedOn]
+GO
+
+ALTER TABLE [dbo].[Brand] ADD  CONSTRAINT [DF_Brand_LastModified]  DEFAULT (getdate()) FOR [LastModified]
+GO
+
+-- after insertion
+
+
+CREATE TABLE dbo.Tmp_brand
+
+            (
+
+           [Id] [bigint] identity(1,1)  NULL,
+	[BrandName] [varchar](128) NOT NULL,
+	[Description] [varchar](1024) NULL,
+	[IsActive] [bit] NOT NULL,
+	[MetaUrl] [varchar](50) NULL,
+	[MetaTitle] [varchar](50) NULL,
+	[MetaKeywords] [varchar](50) NULL,
+	[MetaDescription] [varchar](1024) NULL,
+	[DisplayOrder] [int] NULL,
+	[CreatedOn] [datetime] NULL,
+	[ImageUrl] [varchar](200) NULL,
+	[Language] [varchar](5) NULL,
+	[LastModified] [datetime] NULL,
+
+            )  ON [PRIMARY]
+
+ 
+
+go
+
+SET IDENTITY_INSERT dbo.Tmp_brand ON 
+
+go
+
+IF EXISTS(SELECT * FROM dbo.brand)
+INSERT INTO [dbo].[Tmp_brand]
+           ([Id]
+           ,[BrandName]
+           ,[Description]
+           ,[IsActive]
+           ,[MetaUrl]
+           ,[MetaTitle]
+           ,[MetaKeywords]
+           ,[MetaDescription]
+           ,[DisplayOrder]
+           ,[CreatedOn]
+           ,[ImageUrl]
+           ,[Language]
+           ,[LastModified])           
+                        SELECT [Id]
+           ,[BrandName]
+           ,[Description]
+           ,[IsActive]
+           ,[MetaUrl]
+           ,[MetaTitle]
+           ,[MetaKeywords]
+           ,[MetaDescription]
+           ,[DisplayOrder]
+           ,[CreatedOn]
+           ,[ImageUrl]
+           ,[Language]
+           ,[LastModified] FROM dbo.brand	TABLOCKX
+
+ 
+
+go
+
+SET IDENTITY_INSERT dbo.Tmp_brand OFF
+
+ 
+
+go
+
+ALTER TABLE [dbo].[Brand] DROP CONSTRAINT [DF_Brand_LastModified]
+GO
+
+ALTER TABLE [dbo].[Brand] DROP CONSTRAINT [DF_Brand_CreatedOn]
+GO
+
+ALTER TABLE [dbo].[Brand] DROP CONSTRAINT [DF_Brand_IsActive]
+GO
+
+/****** Object:  Table [dbo].[Brand]    Script Date: 6/3/2015 6:44:46 PM ******/
+DROP TABLE [dbo].[Brand]
+GO
+
+Exec sp_rename 'Tmp_brand', 'brand'
+go
+
+ALTER TABLE [dbo].[Brand] ADD  CONSTRAINT [DF_Brand_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+ALTER TABLE [dbo].[Brand] ADD  CONSTRAINT [DF_Brand_CreatedOn]  DEFAULT (getdate()) FOR [CreatedOn]
+GO
+
+ALTER TABLE [dbo].[Brand] ADD  CONSTRAINT [DF_Brand_LastModified]  DEFAULT (getdate()) FOR [LastModified]
+GO

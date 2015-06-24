@@ -1,0 +1,15 @@
+Mean while other entities like 
+
+quicklinks
+banners
+category_brand_mapping
+product_suppier_mapping
+Product_Categories_Mapping
+ProductSupplierMapping
+ProductImageMapping
+productreviews 
+
+are in progress
+
+placement
+productplacement
