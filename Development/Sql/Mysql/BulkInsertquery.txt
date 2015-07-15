@@ -1,0 +1,5 @@
+SET @query := 'INSERT INTO `test`.`customervarchar`(`entity_type_id`,`attribute_id`,`entity_id`,`value`) VALUES ';
+SET @queryValues := ( SELECT GROUP_CONCAT(CONCAT(CONCAT('(1,13,',UserId,',\'', email,'\'),'), CONCAT('(1,14,',UserId,',\'', firstname,'\')')) SEPARATOR ',')FROM appuser);
+SET @query := CONCAT(@query,@queryValues,';');
+PREPARE STMT FROM @query;
+EXECUTE STMT;
