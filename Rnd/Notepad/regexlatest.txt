@@ -1,0 +1,46 @@
+
+        string allSliderData = System.Text.RegularExpressions.Regex.Replace(JsonHelper.JsonSerializer(allRanges), "(\\\"<ModelStatus>k__BackingField\\\":\\d,|,\\\"SliderId\\\":\\d|,\\\"MaxValue\\\":\\\"(\\d)\\\"|,\\\"MinValue\\\":\\\"(\\d)\\\"|,\\\"SliderType\\\":\\d)", string.Empty);
+	
+	
+	for matching mutli empty lines
+	^[\n\r][\s]*$
+	
+	
+	for matching two lines  after curly bracket
+	}(\s)*\n\n
+	replace it with single line
+	}\n
+	
+	
+	matching ; with two line
+	;\s*\n\n\s*}
+	replace with 
+	;\n}
+		
+regex: SQL: SELECT IS_USED_LOCK\(\?\);\r\nBIND: array \(\r\n(\s)*0 => '(.+)',\r\n\)
+replace: 	
+
+convert into   SQL: SELECT IS_USED_LOCK('magentov1.9.2.index_process_9');
+	
+	
+	
+SQL: SELECT IS_USED_LOCK(?);
+BIND: array (
+  0 => 'magentov1.9.2.index_process_7',
+)
+SQL: SELECT IS_USED_LOCK(?);
+BIND: array (
+  0 => 'magentov1.9.2.index_process_8',
+)
+SQL: SELECT IS_USED_LOCK(?);
+BIND: array (
+  0 => 'magentov1.9.2.index_process_9',
+)
+	
+	
+regex: SQL: SELECT IS_USED_LOCK\(\?\);\r\nBIND: array \(\r\n(\s)*0 => '(.+)',\r\n\)
+
+convert into 
+	
+	
+	
