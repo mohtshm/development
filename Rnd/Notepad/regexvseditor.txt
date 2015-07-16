@@ -16,3 +16,31 @@
 	;\s*\n\n\s*}
 	replace with 
 	;\n}
+		
+regex: SQL: SELECT IS_USED_LOCK\(\?\);\r\nBIND: array \(\r\n(\s)*0 => '(.+)',\r\n\)
+replace: 	
+
+convert into   SQL: SELECT IS_USED_LOCK('magentov1.9.2.index_process_9');
+	
+	
+	
+SQL: SELECT IS_USED_LOCK(?);
+BIND: array (
+  0 => 'magentov1.9.2.index_process_7',
+)
+SQL: SELECT IS_USED_LOCK(?);
+BIND: array (
+  0 => 'magentov1.9.2.index_process_8',
+)
+SQL: SELECT IS_USED_LOCK(?);
+BIND: array (
+  0 => 'magentov1.9.2.index_process_9',
+)
+	
+	
+regex: SQL: SELECT IS_USED_LOCK\(\?\);\r\nBIND: array \(\r\n(\s)*0 => '(.+)',\r\n\)
+
+convert into 
+	
+	
+	
