@@ -1,0 +1,53 @@
+DELIMITER $$
+
+USE `magentodbm1`$$
+
+DROP PROCEDURE IF EXISTS `Customer_Migrate`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Customer_Migrate`()
+BEGIN
+ DECLARE customerId INT;       
+ DECLARE customerName VARCHAR(250);        
+ DECLARE customerLastName VARCHAR(250);        
+ DECLARE customerEmail VARCHAR(500) ;         
+ DECLARE customerPassword VARCHAR(500) DEFAULT "";    
+ DECLARE InsertQuery TEXT;    
+ -- insert into master table
+ 
+--  INSERT INTO `CUSTOMER_ENTITY`(`ENTITY_ID`,`ENTITY_TYPE_ID`,`ATTRIBUTE_SET_ID`,`WEBSITE_ID`,`EMAIL`,`GROUP_ID`,`INCREMENT_ID`,`STORE_ID`,`CREATED_AT`,`UPDATED_AT`,`IS_ACTIVE`,`DISABLE_AUTO_GROUP_CHANGE`)
+--  SELECT CUSTOMER_ID,1,0,1,CUSTOMER_EMAIL,1,NULL,0,NOW(),NOW(),1,0 FROM  CD_WEBSITE.`DSS_CUSTOMERS` WHERE CUSTOMER_ID > 65054 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID;
+-- 
+--  INSERT INTO `CUSTOMER_ENTITY_INT`(`ENTITY_TYPE_ID`,`ATTRIBUTE_ID`,`ENTITY_ID`,`VALUE`)  
+--  SELECT 1,18,CUSTOMER_ID, CASE LOWER(CUSTOMER_GENDER) WHEN 'MALE' THEN 1 ELSE 2 END AS GENDER FROM  CD_WEBSITE.`DSS_CUSTOMERS`  WHERE CUSTOMER_ID > 65054 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID;
+--   
+-- 
+	
+	CREATE TABLE TempCustomerVarchar SELECT * FROM customer_entity_varchar WHERE 1=0;
+	
+        INSERT INTO TempCustomerVarchar(`entity_type_id`,`attribute_id`,`entity_id`,`value`)
+	(SELECT 1,3,customer_id,'Admin' FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID )
+	UNION ALL   
+	(SELECT 1,4,customer_id,NULL FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID )        
+	UNION ALL   
+	(SELECT 1,5,customer_id,customer_fname FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID )
+	UNION ALL   
+	(SELECT 1,6,customer_id,NULL FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID )
+	UNION ALL   
+	(SELECT 1,7,customer_id,customer_lname FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID )
+	UNION ALL   
+	(SELECT 1,8,customer_id,NULL FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID )
+	UNION ALL   
+	(SELECT 1,12,customer_id,customer_password FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID )
+	UNION ALL   
+	(SELECT 1,15,customer_id,NULL FROM cd_website.`dss_customers` WHERE CUSTOMER_ID > 81124 AND CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID );
+	
+	SET FOREIGN_KEY_CHECKS=0;
+	 INSERT INTO customer_entity_varchar(`entity_type_id`,`attribute_id`,`entity_id`,`value`)
+	 SELECT `entity_type_id`,`attribute_id`,`entity_id`,`value` FROM TempCustomerVarchar  ORDER BY entity_id ,attribute_id; 	
+	SET FOREIGN_KEY_CHECKS=1; 
+ 
+DROP TABLE TempCustomerVarchar;
+ 
+END$$
+
+DELIMITER ;
