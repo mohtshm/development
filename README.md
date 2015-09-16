@@ -1,1 +1,1 @@
-This branch is for Apache Mysql and PHP settings
+This branch is for Linux Apache Mysql and PHP settings
