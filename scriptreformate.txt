@@ -73,7 +73,7 @@ FROM cd_website.`dss_orders` AS o
 INNER JOIN cd_website.`dss_customers` AS c 
 ON o.customer_id = c.`customer_id`;
 INSERT  INTO `sales_flat_quote_shipping_rate`
-(`rate_id`,`address_id`,`created_at`,`updated_at`,`carrier`,`carrier_title`,`code`,`method`,`method_description`,`price`
+(`address_id`,`created_at`,`updated_at`,`carrier`,`carrier_title`,`code`,`method`,`method_description`,`price`
 ,`error_message`,`method_title`) 
 SELECT address_id,created_at, updated_at,'freeshipping','Free Shipping','freeshipping_freeshipping','freeshipping',NULL,0.0000,NULL,'Free' FROM sales_flat_quote_address WHERE address_type = 'shipping' ORDER BY address_id DESC;
 END$$
@@ -683,9 +683,11 @@ BEGIN
      -- 
 CALL `clean_product_tables`();
 CALL add_product_entity();
- -- CALL add_product_entity_varchar(); -- 13 mints  
+  CALL add_product_entity_varchar(); -- 13 mints  
  CALL add_product_entity_text();
-  CALL add_product_entity_decimal();
+ CALL `add_product_images`();
+ CALL `update_incomplete_images`();
+ CALL add_product_entity_decimal();
   CALL add_product_entity_datetime();
   CALL add_product_entity_int();
   CALL  `add_product_url_rewrite`();
@@ -742,6 +744,19 @@ INNER JOIN `cd_website`.`dss_customers` AS c ON ao.customer_id = c.`customer_id`
 ORDER BY ao.order_id;
  
 END$$
+
+DROP PROCEDURE IF EXISTS `Migrate_Cust_Product_orders`$$
+
+CREATE  PROCEDURE `Migrate_Cust_Product_orders`()
+BEGIN
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT;SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS;SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION;SET NAMES utf8;SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO';SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0; 
+CALL `Product_Migrate`();
+CALL `Customer_Migrate`();
+CALL `Order_Migrate`();
+SET SQL_MODE=@OLD_SQL_MODE;SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT;SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS;SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION;SET SQL_NOTES=@OLD_SQL_NOTES;
+END$$
+
+
 
 DELIMITER ;
 
