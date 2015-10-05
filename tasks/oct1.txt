@@ -1,0 +1,45 @@
+#call to run sp which is passed as argument to script i.e $1
+mysql -hrdscd.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_admin -prdspws123 -Dcrazydea_deals_tk1 -e"CALL $1();" >> /var/log/cronlogs/$1_$(date +%Y-%m-%d).log 2>&1
+#create dump for db
+mysqldump -hrdsm3cdlive.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_cron_runner -prdscron123 crazydea_deals_tk > crazydea_deals_tk_19Sept15.sql
+mysqldump -hrdsm3cdlive.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_cron_runner -prdscron123 crazydea_deals_tk > crazydea_deals_tk_28Sept15.sql 
+#restore from backup
+ mysql -hrdscd.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_admin -prdspws123 -Dcd_magento < magentoc_crazydeals.sql_001;
+ mysql -hrdscd.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_admin -prdspws123 -Drds_mag_stag <  magento_webkul-2015092626h04m15s01.sql.gz;
+ 
+
+mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -umadmin -pmdb123!!;
+sudo mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -umadmin -p'mdb123!!' -Dcd_website < crazydea_deals_tk_29Sept15.sql
+ cp -r backuphtml/* html/magentoext/
+
+  GRANT ALL PRIVILEGES ON `%`.* TO mag_admin@'%' IDENTIFIED BY 'mdb123!!' WITH GRANT OPTION;
+ sudo mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -umadmin -p'mdb123!!' -magentocd  < magentoc_crazydeals.sql
+ sudo mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -umag_admin -p'mdb123!!'  
+
+oct1
+
+ update customer_entity set email = concat('magento',entity_id,'@sgcd.com');
+mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -umadmin -p'mdb123!!' -Dmagentodev < magentoc_crazydeals.sql
+
+Migration Steps
+run script through YOG for sps magentocd;
+ssh into admin site and root
+sudo mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -umag_admin -p'mdb123!!'  
+CALL Clean_AllTables();
+CALL Add_ZohoColumnInDB(); done
+
+drop database cd_website;create database cd_website;exit;
+
+mysqldump -hrdsm3cdlive.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_cron_runner -prdscron123 crazydea_deals_tk > crazydea_deals_tk_oct1154pm.sql 
+mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -umadmin -p'mdb123!!' -Dcd_website < crazydea_deals_tk_oct1154pm.sql
+
+sudo mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -umag_admin -p'mdb123!!'  -Dcd_website
+select count(*) from dss_customers;
+update dss_customers set customer_email = concat('magento',entity_id,'@sgcd.com');
+
+use magentocd;
+CALL Migrate_Cust_Product_orders();
+
+
+
+

@@ -1,0 +1,176 @@
+2oct
+on rds
+KILL QUERY 22182
+1oct
+/backups/aws/magento/staging/
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\AWS\keys.zip ec2-user@52.76.93.212:/backups/aws/magento/staging/
+14 sept
+
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\backups\14sept\deal14sept.zip ec2-user@52.74.191.181:/backups/
+11 sept
+
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\backups\11sept\Senderdomain.zip ec2-user@52.76.67.129:/backups/
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\backups\11sept\cdwebfcenews.zip ec2-user@52.76.67.129:/backups/sept11
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\11septbanners\banners.zip ec2-user@52.76.93.212:/backups/sept11
+
+
+aws s3 cp banners s3://cdncrazydeal/assets/banners --recursive --include "*" --region ap-southeast-1
+zcat mysqldump-2015-09-11.gz | mysql -h rdsm3cdlive.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_admin -prdspws123 crazydeals_rds
+
+mysqldump -hrdscd.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_admin -prdspws123  crazydea_deals_tk --events --opt --single-transaction  | gzip >  "mysqldump-$(date +%Y-%m-%d).gz";
+wget http://www.crazydeals.ae/assets/temp/temp9sept.zip
+9 sept
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\backup9Sept15\mobile\mobilewebsitesept9.zip ec2-user@52.74.235.3:/backups
+52.74.235.3
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\backup9Sept15\mobile\mobilewebsitesept9.zip ec2-user@52.76.99.4:/backups/sept8
+sudo mv /etc/localtime /etc/localtime.bak
+sudo ln -s /usr/share/zoneinfo/Asia/Dubai /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Asia/Dubai /etc/localtime 
+aws s3 cp . s3://cdncrazydeal/assets/ --recursive --include "*" --region ap-southeast-1
+
+ wget http://www.crazydeals.ae/assets/temp/temp9sept.zip
+wget http://www.crazydeals.ae/assets/banners/banners31Augto9sept627.zip
+ wget http://www.crazydeals.ae/assets/png-trans-images/png-trans-images9sept.zip
+find . -name "*.*" -mtime -14 -print | xargs zip  temp9sept.zip
+mysqldump --user=crazydea_frd-end --password=zhsh}6.cnIWQ --events --opt crazydea_deals_tk | gzip >  "mysqldump-$(date +%Y-%m-%d).gz";
+
+zcat mysqldump-2015-09-09.gz | mysql -h rdscd.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -urds_admin -prdspws123 crazydea_deals_tk
+ wget http://www.crazydeals.ae/mysqldump-2015-09-09.gz
+mysqldump --user=crazydea_frd-end --password=zhsh}6.cnIWQ --events --opt crazydea_deals_tk | gzip > "mysqldump-$(date +%Y-%m-%d).gz";
+mysqldump --user=crazydea_frd-end --password=zhsh}6.cnIWQ --events --opt --single-transaction crazydea_deals_tk | gzip > "mysqldump-$(date +%Y-%m-%d).gz";
+8 sept
+zip -r adminsite.zip /var/www/html -x /var/www/html/assets/png-trans-images**\* /var/www/html/assets/temp**\*
+
+7 sept
+pscp -i F:\server\AWS\keys\cd_dev.ppk ec2-user@52.74.217.236:/backups/mysql_backup/* F:\server\AWS\instance\staging\magento_d52.74.217.236
+pscp -i F:\server\AWS\keys\cd_dev.ppk ec2-user@52.74.217.236:/backups/* F:\server\AWS\instance\staging\magento_d52.74.217.236
+pscp -i F:\server\AWS\keys\cd_dev.ppk ec2-user@52.74.217.236:/backups/WEB2015090* F:\server\AWS\instance\staging\magento_d52.74.217.236
+
+6 sept
+sudo find /var/www/html -type d -exec chown apache:www {} +
+ sudo find /var/www/html -type f -exec chown apache:www {} +
+ sudo find /var/www/html -type d -exec   chmod 2775 {} +
+  sudo find /var/www/html -type f -exec chmod 0664 {} +;
+5 sept
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk ‪F:\server\AWS\cdMigrationToAWS\contentsUpload\banners\bannerstemp(2)\bannerstemp5spt.zip ec2-user@52.76.93.212:/backups/sept2
+4 sept
+zip -r temp.zip temp
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk ‪F:\server\AWS\cdMigrationToAWS\contentsUpload\banners\banners.zip ec2-user@52.76.93.212:/backups/sept2
+wget http://www.crazydeals.ae/assets/temp.zip
+aws s3 cp css s3://cdncrazydeal/assets/css --recursive --include "*" --region ap-southeast-1
+aws s3 cp png-trans-images s3://cdncrazydeal/assets/png-trans-images --recursive --include "*" --region ap-southeast-1
+aws s3 cp temp s3://cdncrazydeal/assets/temp --recursive --include "*" --region ap-southeast-1
+3 sept 15
+[website]wget http://www.crazydeals.com/assets/site_assets.zip
+[admin]wget http://www.crazydeals.ae/admin/assets/adminassetsfolder.zip
+2sept 15
+upload
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\live\db\sept2\crazydea_deals_tk.sql.gz ec2-user@52.76.93.212:/backups/sept2
+
+// rights command for users
+1 sept15
+ sudo find ../html/* -name  "*.*" ! -name "admin" | xargs -i mv {} ../html/temp2/
+ upload
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\AWS\cdMigrationToAWS\deployment\sept1\sept1deployment.zip ec2-user@52.76.93.212:/backups/sept1
+29aug15
+mov all files
+go in the folder containing the source folder
+find source/ -name "*.txt" | xargs -i mv {} target/
+chmod g+rwx html
+upload
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\live\sitebak\site\27augbackup\siteassets.zip ec2-user@52.74.191.181:/backups/29aug15
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\live\sitebak\admin\29backup\application.zip ec2-user@52.74.191.181:/backups/29aug15
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\live\sitebak\admin\29backup\adminassests.zip ec2-user@52.74.191.181:/backups/29aug15
+pscp -i F:\server\AWS\keys\CD_website\CD_Website.ppk F:\server\inmotion\live\sitebak\site\29augbackup\crazydea_deals_tk.sql.gz ec2-user@52.74.191.181:/backups/29aug15
+
+mysql -h rdscd.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P 3306 -u rds_admin -p rdspws123
+move to db on rds
+zcat crazydea_deals_tk.sql.gz | mysql -h rdscd.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P 3306 -u rds_admin -p crazydea_deals_tk
+
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html
+yum install -y httpd24 php56  php56-pdo php56-mysqlnd
+
+sudo chkconfig httpd on
+sudo groupadd www
+sudo usermod -a -G www ec2-user
+chown -R root:www /var/www
+ sudo chmod 2775 /var/www
+ find /var/www -type d -exec sudo xargs -i chmod 2775 {} +
+  find /var/www -type f -exec sudo xargs -i chmod 0664 {} +
+   find /var/www -type f -exec sudo xargs -i chown apache:apache {} +
+  find /var/www -type f -exec   sudo xargs -i  chown apache:www {} +
+  ///// from google //
+  sudo find /var/www -type d -exec sudo  chmod 2775 {} +
+  sudo find /var/www -type f -exec chmod 0664 {} +;
+# or
+
+sudo find /path/to/dir -type f -print0 | xargs -0 chmod 0664
+  //////
+  
+	yum install php56-mbstring
+	yum installphp56-gd
+cd /var/www/html
+wget https://files.phpmyadmin.net/phpMyAdmin/4.4.13.1/phpMyAdmin-4.4.13.1-english.tar.gz
+tar -xzvf phpMyAdmin-4.4.13.1-english.tar.gz -C /var/www/html
+mv phpMyAdmin-4.4.13.1-english phpmyadmin
+rm -rf phpMyAdmin-4.4.13.1-english.tar.gz
+/////////////////////////////////////////
+
+    pwd: The pwd command allows you to know the directory in which you're located (pwd stands for "print working directory"). For example, pwd in the desktop directory will show ~/Desktop. Note that the GNOME terminal also displays this information in the title bar of its window.
+
+    ifconfig: This reports on your system's network interfaces.
+
+    iwconfig: The iwconfig command shows you any wireless network adapters and the wireless-specific information from them, such as speed and network connected.
+
+    ps: The ps command allows you to view all the processes running on the machine.
+
+The following commands list the hardware on your computer, either of a specific type or with a specific method. They are most useful for debugging when a piece of hardware does not function correctly.
+
+    lspci: The lspci command lists all PCI buses and devices connected to them. This commonly includes network cards and sound cards.
+
+    lsusb: The lsusb command lists all USB buses and any connected USB devices, such as printers and thumb drives.
+
+    lshal: The lshal command lists all devices the hardware abstraction layer (HAL) knows about, which should be most hardware on your system.
+
+    lshw: The lshw command lists hardware on your system, including maker, type, and where it is connected.
+
+Search and edit text files by using the following commands.
+    grep: The grep command allows you to search inside a number of files for a particular search pattern and then print matching lines. For example, grep blah file will search for the text "blah" in the file and then print any matching lines.
+    sed: The sed (or Stream EDitor) command allows search and replace of a particular string in a file. For example, if you want to find the string "cat" and replace it with "dog" in a file named pets, type
+    sed s/cat/dog/g pets.
+
+Both grep and sed are extremely powerful programs. There are many excellent tutorials available on using them, but here are a few good Web sites to get you started:
+    www.panix.com/~elflord/unix/grep.html
+    www.itworld.com/Comp/2378/swol-1199-unix101/
+
+Three other commands are useful for dealing with text.
+
+    cat: 
+	The cat command, short for concatenate, is useful for viewing and adding to text files. The simple command cat FILENAME displays the contents of the file. Using cat FILENAME file adds the contents of the first file to the second.
+
+    nano: 
+	Nano is a simple text editor for the command line. To open a file, use nano filename. Commands listed at the bottom of the screen are accessed via pressing Ctrl followed by the letter.
+
+    less: 
+	The less command is used for viewing text files as well as standard output. 
+	A common usage is to pipe another command through less to be able to see all the output, such as ls | less.
+
+    adduser: The adduser command creates a new user. To create a new user, simply type 
+	sudo adduser $loginname
+	. This creates the user's home directory and default group. It prompts for a user password and then further details about the user.
+	changes Joe's password.
+    passwd:sudo passwd joe 
+
+    who: The who command tells you who is currently logged into the machine.
+
+    addgroup: The addgroup command adds a new group. To create a new group, type sudo addgroup $groupname.
+
+    deluser: The deluser command removes a user from the system. To remove the user's files and home directory, you need to add the
+    -remove-home option.
+
+    delgroup: The delgroup command removes a group from the system. You cannot remove a group that is the primary group of any users.
+   // users in group apache
+   getent group apache
+   // add user to additional group is remove -a then it will be remove from other groups and will be added into mention groups use comman(,) from multiple groups
+   usermod -a -G www ftpuser
+   
