@@ -14,8 +14,35 @@ DROP PROCEDURE IF EXISTS `add_customer_entity_int`$$
 
 CREATE  PROCEDURE `add_customer_entity_int`()
 BEGIN
- INSERT INTO `customer_entity_int`(`ENTITY_TYPE_ID`,`ATTRIBUTE_ID`,`ENTITY_ID`,`VALUE`)  
- SELECT 1,18,CUSTOMER_ID, CASE LOWER(CUSTOMER_GENDER) WHEN 'MALE' THEN 1 ELSE 2 END AS GENDER FROM  cd_website.`dss_customers`  WHERE CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID;  
+-- INSERT INTO `customer_entity_int`(`ENTITY_TYPE_ID`,`ATTRIBUTE_ID`,`ENTITY_ID`,`VALUE`)  
+-- SELECT 1,18,CUSTOMER_ID, CASE LOWER(CUSTOMER_GENDER) WHEN 'MALE' THEN 1 ELSE 2 END AS GENDER FROM  cd_website.`dss_customers`  WHERE CUSTOMER_EMAIL <> ''  GROUP BY CUSTOMER_EMAIL  ORDER BY CUSTOMER_ID;  
+
+DECLARE lowerLimit INT DEFAULT 0;       
+ DECLARE upperLimit INT DEFAULT 0; 
+ DECLARE loopCounter INT DEFAULT 1;
+ DECLARE totalCount INT DEFAULT 1;
+ DECLARE tablePortion INT DEFAULT 2;
+   
+	SET totalCount = (SELECT COUNT(entity_id) FROM TempCustomerVarchar);	 
+	SET upperLimit = totalCount / tablePortion ;
+	
+		
+	INSERT INTO customer_entity_varchar(`entity_type_id`,`attribute_id`,`entity_id`,`value`)
+	SELECT `entity_type_id`,`attribute_id`,`entity_id`,`value` FROM TempCustomerVarchar  ORDER BY entity_id ,attribute_id LIMIT lowerLimit,upperLimit; 	    	
+	customer_loop: LOOP
+		SET loopCounter = loopCounter + 1; 	 
+		 SET lowerLimit = upperLimit+1;
+		 SET upperLimit = loopCounter * (totalCount / tablePortion );	 
+		 
+		 INSERT INTO customer_entity_varchar(`entity_type_id`,`attribute_id`,`entity_id`,`value`)
+		 SELECT `entity_type_id`,`attribute_id`,`entity_id`,`value` FROM TempCustomerVarchar  ORDER BY entity_id ,attribute_id LIMIT lowerLimit,upperLimit; 	
+			 
+		IF upperLimit >= totalCount THEN
+		LEAVE customer_loop;
+		END IF;
+	 END LOOP customer_loop;  
+ 
+ 
 END$$
 
 
@@ -23,10 +50,33 @@ DROP PROCEDURE IF EXISTS `add_customer_varchar`$$
 
 CREATE  PROCEDURE `add_customer_varchar`()
 BEGIN
-TRUNCATE TABLE `customer_entity_varchar`;
 	INSERT INTO customer_entity_varchar(`entity_type_id`,`attribute_id`,`entity_id`,`value`)
 	SELECT `entity_type_id`,`attribute_id`,`entity_id`,`value` FROM TempCustomerVarchar  ORDER BY entity_id ,attribute_id; 	    		 
-  		 
+-- DECLARE lowerLimit INT DEFAULT 0;       
+-- DECLARE upperLimit INT DEFAULT 0; 
+-- DECLARE loopCounter INT DEFAULT 1;
+-- DECLARE totalCount INT DEFAULT 1;
+-- DECLARE tablePortion INT DEFAULT 2;
+--   
+--	SET totalCount = (SELECT COUNT(entity_id) FROM TempCustomerVarchar);	 
+--	SET upperLimit = totalCount / tablePortion ;
+--	
+--		
+--	INSERT INTO customer_entity_varchar(`entity_type_id`,`attribute_id`,`entity_id`,`value`)
+--	SELECT `entity_type_id`,`attribute_id`,`entity_id`,`value` FROM TempCustomerVarchar  ORDER BY entity_id ,attribute_id LIMIT lowerLimit,upperLimit; 	    	
+--	customer_loop: LOOP
+--		SET loopCounter = loopCounter + 1; 	 
+--		 SET lowerLimit = upperLimit+1;
+--		 SET upperLimit = loopCounter * (totalCount / tablePortion );	 
+--		 
+--		 INSERT INTO customer_entity_varchar(`entity_type_id`,`attribute_id`,`entity_id`,`value`)
+--		 SELECT `entity_type_id`,`attribute_id`,`entity_id`,`value` FROM TempCustomerVarchar  ORDER BY entity_id ,attribute_id LIMIT lowerLimit,upperLimit; 	
+--			 
+--		IF upperLimit >= totalCount THEN
+--		LEAVE customer_loop;
+--		END IF;
+--	 END LOOP customer_loop;  
+--  		 
  
 END$$
 
@@ -680,10 +730,10 @@ DROP PROCEDURE IF EXISTS `Product_Migrate`$$
 
 CREATE  PROCEDURE `Product_Migrate`()
 BEGIN  
-     -- 
+     
 CALL `clean_product_tables`();
 CALL add_product_entity();
- -- CALL add_product_entity_varchar(); -- 13 mints  
+ CALL add_product_entity_varchar();   
  CALL add_product_entity_text();
   CALL add_product_entity_decimal();
   CALL add_product_entity_datetime();

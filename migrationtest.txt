@@ -1,0 +1,26 @@
+   <username><![CDATA[msadmin]]></username>
+                    <password><![CDATA[smdb123@!]]></password>
+                    <dbname><![CDATA[magentostaging]]></dbname>
+					
+<VirtualHost *:80>
+    ServerAdmin mohtisham.zubair@snacglobal.com
+    DocumentRoot "/var/www/html/mstaging"
+    ServerName magento-staging.crazydeals.com
+    ErrorLog "logs/magento-staging.crazydeals.com.log"
+    CustomLog "logs/magento-staging.crazydeals.com-access.log" common
+</VirtualHost>
+
+useradd -d /var/www/html/mstaging stagingftpuser 
+passwd stagingftpuser 
+groudadd --system ftpgroup 
+gpasswd -a stagingftpuser ftpgroup
+usermod -aG ftpgroup stagingftpuser
+ chown root:root /home/stagingftpuser
+ chmod 755 /home/stagingftpuser
+ chown stagingftpuser:apache /var/www/html/mstaging
+ 
+ stagingftpuser
+ ftpuser: staging123
+ 
+ mysqldump -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -umag_admin -p'mdb123!!' magentocd > magentocd30Sept15803.sql
+[root@ip-155-55-1-191 sept30]# mysql -hmagentodb.c38dznqei5rk.ap-southeast-1.rds.amazonaws.com -P3306 -umag_admin -p'mdb123!!' magentostaging < magentocd30Sept15803.sql
